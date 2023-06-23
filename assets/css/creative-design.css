@@ -11216,5 +11216,20 @@ nav.page-navbar.affix .navbar-brand .text-dark {
 	height: 100vh;
 }
 
+tr.spaceUnder>td {
+  padding-bottom: 1em;
+}
 
+.tdres {
+	width: 15%;
+}
 
+.img_inv {
+	width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .tdres {
+		width: 40%;
+	}
+}

@@ -29,14 +29,41 @@ $(document).ready(function(){
             });
         } 
     });
+	
+	$('#char_talk').click(function(){
+		var $p = $('#char_talk_p');
+		if ($p.css('display') == 'none'){
+			$p.css('display', 'block');
+		} else {
+			$p.css('display', 'none');
+		}
+	});
+	
+	$('#char_abs').click(function(){
+		var $p = $('#char_abs_p');
+		if ($p.css('display') == 'none'){
+			$p.css('display', 'block');
+		} else {
+			$p.css('display', 'none');
+		}
+	});
+	
+	$('#ber_talk').click(function(){
+		var $p = $('#ber_talk_p');
+		if ($p.css('display') == 'none'){
+			$p.css('display', 'block');
+		} else {
+			$p.css('display', 'none');
+		}
+	});
+	
+	$('#ber_abs').click(function(){
+		var $p = $('#ber_abs_p');
+		if ($p.css('display') == 'none'){
+			$p.css('display', 'block');
+		} else {
+			$p.css('display', 'none');
+		}
+	});
 }); 
 
-
-window.onload = function(e){ 
-    console.log("window.onload");
-	$("#menu > a").each(function(){
-		console.log('xxx');
-		$(this).removeClass("active");
-	});
-	$(this).addClass('active');
-}
