@@ -11222,6 +11222,7 @@ tr.spaceUnder>td {
 
 .tdres {
 	width: 15%;
+	vertical-align: top;
 }
 
 .img_inv {
@@ -11231,5 +11232,6 @@ tr.spaceUnder>td {
 @media only screen and (max-width: 600px) {
     .tdres {
 		width: 40%;
+		vertical-align: top;
 	}
 }
