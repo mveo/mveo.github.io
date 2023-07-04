@@ -11235,3 +11235,11 @@ tr.spaceUnder>td {
 		vertical-align: top;
 	}
 }
+
+.redx {
+    color: red !important;
+}
+
+.check {
+    color: green !important;
+}
