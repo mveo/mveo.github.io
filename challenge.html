@@ -51,15 +51,73 @@
 		<div class="cell2">
 			<div class="container">
 				<h4>Data-Centric Land Cover Classification Challenge</h4>
+					<p>
+						Curating, labeling, and working with large data sets requires a significant investment of energy, time, and money. Focusing on a core set of the most valuable samples, tailored to the task at hand, can effectively reduce these costs. Such data-centric approaches that prioritize value and quality over quantity have the potential to achieve this goal. This relatively recent trend in the field of machine learning shifts the focus from improving machine learning models, also known as model-centric machine learning, to optimize the data used to train these models, including how this data is presented during the learning process.
+					</p>
+					
+				<h5>Challenge Summary</h5>
+					<p>
+						The data-centric land cover classification challenge, as part of the Workshop on Machine Vision for Earth Observation and Environment Monitoring and the British Machine Vision Conference (BMVC) 2023, aims at novel data-centric approaches towards selecting a core set of training samples for a <strong>semantic segmentation task</strong>. 
+					</p>
+					<p>
+						Participants of this challenge are asked to develop a ranking strategy that assigns a score to each sample from a pool of candidate examples based on each sample's importance to the training procedure. The generated score/ranking will then be used to select a core set of training samples to train a pre-defined classifier, in this case a <a href="https://arxiv.org/abs/1505.04597" target="_blank">U-Net</a>. Success is measured by training the aforementioned classifier multiple times using training datasets of different sizes based on the given ranking/scores (for example, by training a model using the top 1000 and the top 500 samples) and calculating the average Jaccard index using an undisclosed test dataset for the trained models.
+					</p>
+					
+				<h5>Dataset</h5>
 				<p>
-					Curating, labeling, and working with large data sets requires a significant investment of energy, time, and money. Focusing on a core set of the most valuable samples, tailored to the task at hand, can effectively reduce these costs. Such data-centric approaches that prioritize value and quality over quantity have the potential to achieve this goal. This relatively recent trend in the field of machine learning shifts the focus from improving machine learning models, also known as model-centric machine learning, to optimize the data used to train these models, including how this data is presented during the learning process.
+					The challenge will use the <a href="https://www.grss-ieee.org/community/technical-committees/2022-ieee-grss-data-fusion-contest/" target="_blank">Data Fusion Contest 2022 dataset</a>. For this challenge, 90% of the training set images were divided into patches (of 256x256 pixels) thus composing the pool of candidate samples for training. 10% of the training images are part of a validation dataset. Finally, the evaluation will be carried out using the undisclosed test set. The dataset can be openly downloaded at <a href="https://ieee-dataport.org/competitions/data-fusion-contest-2022-dfc2022" target="_blank">ieee-dataport.org/competitions/data-fusion-contest-2022-dfc2022</a>.
+				</p>
+				
+				<h5>Resources (including pool)</h5>
+				<p>
+					Participants can find some resources available <a href="https://github.com/mveo/mveo-challenge" target="_blank">here</a>.
+					In this repo, participants can find:
+					<ul class="general">
+						<li class="general">an initial code to train the U-Net model using the pool of candidate samples</li>
+						<li class="general">the pool of training candidate samples (file <a href="https://github.com/mveo/mveo-challenge/blob/main/train_coordinate_list.txt" target="_blank">train_coordinate_list.txt</a>)</li>
+						<li class="general">the list of validation images (file <a href="https://github.com/mveo/mveo-challenge/blob/main/val_image_list.txt" target="_blank">val_image_list.txt</a>)</li>
+					</ul>
+				</p>
+				
+				<h5>Submission</h5>
+				<p>
+					First, participants should download the <a href="https://github.com/mveo/mveo-challenge/blob/main/train_coordinate_list.txt" target="_blank">pool of candidate samples</a>.
+					Each row of this file represents a candidate sample for the training and is composed of 5 columns:
+				<p>
+				<p>
+					<em>< name of the city > < name of the image > < patch x coordinate > < patch y coordinate > < sample score (float from 0.0 to 1.0) ></em>
 				</p>
 				<p>
-					The data-centric land cover classification challenge, as part of the Workshop on Machine Vision for Earth Observation and Environment Monitoring and the British Machine Vision Conference (BMVC) 2023, aims at novel data-centric approaches towards selecting a core set of training samples. The challenge is a semantic segmentation task using the <a href="https://www.grss-ieee.org/community/technical-committees/2022-ieee-grss-data-fusion-contest/" target="_blank">Data Fusion Contest 2022 dataset</a>.
+					Currently, all samples have the same score/importance (i.e., <em>1.0</em>). As mentioned before, the main objective of the participants is to develop a ranking system that assigns different scores (from 0.0 to 1.0) to the candidate samples depending on their importance to the training procedure.
 				</p>
 				<p>
-					Participants of this challenge are asked to develop a data selection and ranking strategy that provides a core set of training samples from a candidate pool with a ranking based on the samples’ value for training a pre-defined classifier. Success is measured by the mean average accuracy (mAP) on an undisclosed test dataset, where the classifier is trained with training datasets of different sizes based on the provided ranking. The goal of the participants is to maximize the area under curve obtained from the resulting mAPs.
+					The <strong>final submission</strong> must be a file with all candidate samples, each with the same 5 columns, but varying the score depending on the importance of the example. This file must be sent to <a href="keiller.nogueira@stir.ac.uk">keiller.nogueira@stir.ac.uk</a>, with title <strong>[BMVC Challenge Submission TEAMNAME]</strong>, where TEAMNAME should be the name of your team for the leaderboard (below).
 				</p>
+			
+				<h5>Leaderboard</h5>
+				<p>
+					Submissions will be evaluated by training multiple U-Net models using training datasets of different sizes based on the given ranking/scores and calculating the average Jaccard index using an undisclosed test dataset for all trained models.
+					Then final result generated by the each submission will then be included into the leaderboard below, which will be updated regularly.
+				</p>
+
+				<div>
+					<table class="table table-striped">
+					 <thead>
+						<tr>
+						   <th scope="col">Team Name</th>
+						   <th scope="col">Submission date</th>
+						   <th scope="col">Average Jaccard</th>
+						</tr>
+					 </thead>
+					 <tbody>
+						<tr>
+						   <td>Baseline (model trained on 1000 samples based on class balance)</td>
+						   <td>31, July</td>
+						   <td>46.79</td>
+						</tr>
+					 </tbody>
+					</table>
+				</div>
 				
 				<h5>Timeline</h5>
 				<div>
@@ -72,20 +130,32 @@
 					 </thead>
 					 <tbody>
 						<tr>
-						   <td>Submission deadline</td>
-						   <td>Friday, 15 September 2023</td>
+						   <td>Submission Deadline (to submit the ranking file)</td>
+						   <td>Sunday, 15 October 2023</td>
 						</tr>
 						<tr>
-						   <td>Publish Final Results</td>
-						   <td>Friday, 13 October 2023</td>
+						   <td>Publication of Final Results</td>
+						   <td>Friday, 10 November 2023</td>
 						</tr>
 						<tr>
 						   <td>Workshop</td>
 						   <td>Friday, 24 November 2023</td>
 						</tr>
 					 </tbody>
-				</table>
-			</div>
+					</table>
+				</div>
+				
+				<h5>Results, Presentation, Awards, and Prizes</h5>
+				<p>
+					The final results of this challenge will be presented during the Workshop.
+					The authors of the 1st to 3rd-ranked teams will be invited to present their approaches at the Workshop in Aberdeen/UK, on 24 November 2023.
+					These authors will also be invited to co-author a journal paper which will summarize the outcome of this challenge and will be submitted with open access to IEEE JSTARS.
+				</p>
+				
+				<h5>Organizers</h5>
+					<p>Keiller Nogueira, University of Stirling, UK<br>
+					Ribana Roscher, Research Center Jülich and University of Bonn, Germany<br>
+					Ronny Hänsch, German Aerospace Center (DLR), Germany</p>
 			</div>
 		</div>
 	</div>
