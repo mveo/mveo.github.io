@@ -65,5 +65,42 @@ $(document).ready(function(){
 			$p.css('display', 'none');
 		}
 	});
+	
+	$('#paper1').click(function(){
+		var $p = $('#paper1_p');
+		if ($p.css('display') == 'none'){
+			$p.css('display', 'block');
+		} else {
+			$p.css('display', 'none');
+		}
+	});
+	
+	$('#paper2').click(function(){
+		var $p = $('#paper2_p');
+		if ($p.css('display') == 'none'){
+			$p.css('display', 'block');
+		} else {
+			$p.css('display', 'none');
+		}
+	});
+	
+	$('#paper3').click(function(){
+		var $p = $('#paper3_p');
+		if ($p.css('display') == 'none'){
+			$p.css('display', 'block');
+		} else {
+			$p.css('display', 'none');
+		}
+	});
+	
+	$('#paper4').click(function(){
+		var $p = $('#paper4_p');
+		if ($p.css('display') == 'none'){
+			$p.css('display', 'block');
+		} else {
+			$p.css('display', 'none');
+		}
+	});
+	
 }); 
 

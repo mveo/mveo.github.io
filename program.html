@@ -41,6 +41,7 @@
 						<a href="submission.html" class="nav-item nav-link">Submission</a>
 						<a href="#" class="nav-item nav-link active">Program</a>
 						<a href="https://bmvc2023.org/" target="_blank" class="nav-item nav-link">BMVC 2023</a>
+						<a href="location.html" class="nav-item nav-link">Location</a>
 						<a href="people.html" class="nav-item nav-link">People</a>
 						<a href="sponsors.html" class="nav-item nav-link">Sponsors</a>
 					</div>
@@ -67,8 +68,48 @@
 						   <td>Tea Break</td>
 						</tr>
 						<tr>
-						   <td><b>11:30-13:00</b></td>
-						   <td>Paper oral presentation (15 minutes presentation + 5 questions)</td>
+						   <td><b>11:30-11:50</b></td>
+						   <td>
+								<p><a id="paper1" href="javascript:void(0);" tabindex="0" role="button">An a contrario approach for plant disease detection</a></p>
+								<i>Rebecca Leygonie (Université Paris Cité), Sylvain Lobry (Université Paris Cité), Laurent Wendling (Université de Paris)</i>
+								<p id="paper1_p" style="display: none">
+									<br/>
+									Detecting plant diseases or abnormalities is not a trivial task, as they can be caused by multiple factors such as environmental conditions, genetics, pathogens, etc. Because there is a need to help farmers make decisions to maximize crop yields, many studies have emerged in recent years using deep learning on agricultural images to detect plant diseases, which can be considered as an anomaly detection task. However, these approaches are often limited by the availability of annotated data or prior knowledge of the existence of an anomaly. We propose an approach that can detect part of the anomalies without prior knowledge of their existence, thus overcoming some of these limitations. To this end, we train a model on an auxiliary prediction task (plants' age regression). We then use an explicability model to retrieve heatmaps whose distributions are studied. For each new observation, we propose to study how closely its heatmap follows the desired distribution and we derive a score indicating potential anomalies. Experiments on the GrowliFlower dataset indicate how our proposed method can help potential end-user to automatically find anomalies.
+								</p>
+							</td>
+						</tr>
+						<tr>
+						   <td><b>11:50-12:10</b></td>
+						   <td>
+								<p><a id="paper2" href="javascript:void(0);" tabindex="0" role="button">Multi-task prompt-RSVQA to explicitly count objects on aerial images</a></p>
+								<i>Christel Chappuis (EPFL), Charlotte Sertic (EPFL), Nicola Santacroce (EPFL), Javiera Castillo Navarro (EPFL), Sylvain Lobry (Université Paris Cité), Bertrand Le Saux (European Space Agency (ESA)), Devis Tuia (EPFL)</i>
+								<p id="paper2_p" style="display: none">
+									<br/>
+									Introduced to enable a wider use of Earth Observation images using natural language, Remote Sensing Visual Question Answering (RSVQA) remains a challenging task, in particular for questions related to counting. To address this specific challenge, we propose a modular Multi-task prompt-RSVQA model based on object detection and question answering modules. By creating a semantic bottleneck describing the image and providing a visual answer, our model allows users to assess the visual grounding of the answer and better interpret the prediction. A set of ablation studies are designed to consider the contributions of different modules and evaluation metrics are discussed for a finer-grained assessment. Experiments demonstrate competitive results against literature baselines and a zero-shot VQA model. In particular, our proposed model predicts answers for numerical Counting questions that are consistently closer in distance to the ground truth.	
+								</p>
+							</td>
+						</tr>
+						<tr>
+						   <td><b>12:10-12:30</b></td>
+						   <td>
+								<p><a id="paper3" href="javascript:void(0);" tabindex="0" role="button">Contrastive Maximum Mean Discrepancy for Unsupervised Domain Adaptation Applied to Large Scale 3D LiDAR Semantic Segmentation</a></p>
+								<i>Lamiae El Mendili (Université Laval), Sylvie Daniel (Université Laval), Thierry Badard (Université Laval / CRDIG), Patrick Dallaire (Université Laval)</i>
+								<p id="paper3_p" style="display: none">
+									<br/>
+									Semantic segmentation of 3D LiDAR point clouds is very important for applications like autonomous driving and digital twins of cities. However, current deep learning models suffer from a significant generalization gap. Unsupervised Domain Adaptation (UDA) methods have recently emerged to tackle this issue.  While domain invariant feature learning using maximum mean discrepancy (MMD) has shown promise in image domains due to its simplicity, its application remains unexplored in large-scale outdoor point clouds. Moreover, previous methods don't consider the class information, which can lead to suboptimal adaptation performance. In response, we propose a new approach—Contrastive Maximum Mean Discrepancy (CMMD)— to maximize intra-class domain alignment and minimize inter-class domain discrepancy. We integrate CMMD into a 3D semantic segmentation model for LiDAR point clouds. The evaluation of our method with large-scale UDA datasets shows that it surpasses several state-of-the-art UDA approaches for 3D LiDAR point clouds while being competitive with the current best-performing approach. CMMD is a promising UDA approach with strong potential for point cloud semantic segmentation.	
+								</p>
+							</td>
+						</tr>
+						<tr>
+						   <td><b>12:30-12:50</b></td>
+						   <td>
+								<p><a id="paper4" href="javascript:void(0);" tabindex="0" role="button">Computer Vision Pipeline for Automated Antarctic Krill Analysis</a></p>
+								<i>Mazvydas Gudelis (UEA), Michal Mackiewicz (University of East Anglia), Sophie Fielding (British Antarctic Survey), Julie Bremner (University of East Anglia)</i>
+								<p id="paper4_p" style="display: none">
+									<br/>
+									British Antarctic Survey (BAS) researchers launch annual expeditions to the Antarctic in order to estimate Antarctic Krill biomass and assess the change from previous years. These comparisons provide insight into the effects of the current environment on this key component of the marine food chain. In this work we have developed tools for automating the data collection and analysis process, using web-based image annotation tools and deep learning image classification and regression models. We achieve highly accurate krill instance segmentation results with an average 77.28% AP score, as well as separate maturity stage and length estimation of krill specimens with 62.99% accuracy and a 1.98 mm length error respectively.
+								</p>
+							</td>
 						</tr>
 						<tr>
 						   <td><b>13:00-14:00</b></td>
@@ -98,9 +139,9 @@
 							</td>
 							<td style="padding-left:7px">
 								<p><b>Charlotte Pelletier, Univ. Bretagne Sud, Vannes, France</b></p>
-								<p><a id="char_talk" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">Abstract</a></p>
+								<p><a id="char_talk" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">Title: Domain adaptation for satellite image time series</a></p>
 								<p id="char_talk_p" style="display: none">
-									TBA
+									The recent developments of deep learning models have significantly improved the classification of satellite image time series (SITS), specifically for land cover mapping and crop-type identification applications. To capture complex temporal patterns like crop phenology, these approaches require a large quantity of correctly labelled data, which may not always be readily accessible in the region of interest or at a given period. One solution is to train a model in a source domain where labels are available and then apply it to the unlabelled target domain. However, when the two domains correspond to geographically or temporally distant regions, the source-trained model might perform poorly when applied to the target domain. The discrepancy arises from the dissimilarity between the source and target data distributions caused by variations in local conditions, such as soil, climate, or farmer practices, which lead to spectral and temporal shifts between the two domains. To mitigate this issue, a range of methods have been developed in recent years, known as unsupervised domain adaptation (UDA) when no target labelled data are available, or semi-supervised domain adaptation (SSDA) when a small amount of labels is accessible. However, these techniques do not account for SITS specificities and do not learn explicitly the temporal shift of SITS when dealing with two geographical areas or do not benefit from the temporal dimension for the same region at a different time, and thus provide only limited benefits for downstream tasks. In this talk, I will introduce recent works on UDA and SSDA that have proven their efficiency in improving SITS classification. In particular, I will present TimeMatch and Match-And-Deform (MAD), two novel UDA techniques tailored for SITS that directly address the temporal shift issue. TimeMatch combines a temporal shift estimation with a semi-supervised learning framework to adapt a model to the unlabelled target region, while MAD leverages optimal transport with dynamic time warping to perform time series matching and timestamp alignment. Both approaches, tested on the TimeMatch dataset, have shown improved performance compared to the state-of-the-art deep time series domain adaptation techniques.
 								</p>
 								<p><a id="char_abs" href="javascript:void(0);" tabindex="0" role="button" title="Bio">Bio</a></p>
 								<p id="char_abs_p" style="display: none">
