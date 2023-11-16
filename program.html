@@ -61,7 +61,28 @@
 						</tr>
 						<tr>
 						   <td><b>10:10-11:10</b></td>
-						   <td>Invited speaker: Charlotte Pelletier (check below)</td>
+						   <td>
+								<table>
+								<tbody>
+									<tr style="background-color:inherit"> 
+										<td class="tdres" style="border-right: none">
+											<img src="assets/imgs/223_crop_head.jpg" alt="Dr Charlotte Pelletier" class="img_inv"> 
+										</td>
+										<td style="padding-left:7px">
+											<p><b>Charlotte Pelletier, Univ. Bretagne Sud, Vannes, France</b></p>
+											<p><a id="char_talk" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">Title: Domain adaptation for satellite image time series</a></p>
+											<p id="char_talk_p" style="display: none">
+												The recent developments of deep learning models have significantly improved the classification of satellite image time series (SITS), specifically for land cover mapping and crop-type identification applications. To capture complex temporal patterns like crop phenology, these approaches require a large quantity of correctly labelled data, which may not always be readily accessible in the region of interest or at a given period. One solution is to train a model in a source domain where labels are available and then apply it to the unlabelled target domain. However, when the two domains correspond to geographically or temporally distant regions, the source-trained model might perform poorly when applied to the target domain. The discrepancy arises from the dissimilarity between the source and target data distributions caused by variations in local conditions, such as soil, climate, or farmer practices, which lead to spectral and temporal shifts between the two domains. To mitigate this issue, a range of methods have been developed in recent years, known as unsupervised domain adaptation (UDA) when no target labelled data are available, or semi-supervised domain adaptation (SSDA) when a small amount of labels is accessible. However, these techniques do not account for SITS specificities and do not learn explicitly the temporal shift of SITS when dealing with two geographical areas or do not benefit from the temporal dimension for the same region at a different time, and thus provide only limited benefits for downstream tasks. In this talk, I will introduce recent works on UDA and SSDA that have proven their efficiency in improving SITS classification. In particular, I will present TimeMatch and Match-And-Deform (MAD), two novel UDA techniques tailored for SITS that directly address the temporal shift issue. TimeMatch combines a temporal shift estimation with a semi-supervised learning framework to adapt a model to the unlabelled target region, while MAD leverages optimal transport with dynamic time warping to perform time series matching and timestamp alignment. Both approaches, tested on the TimeMatch dataset, have shown improved performance compared to the state-of-the-art deep time series domain adaptation techniques.
+											</p>
+											<p><a id="char_abs" href="javascript:void(0);" tabindex="0" role="button" title="Bio">Bio</a></p>
+											<p id="char_abs_p" style="display: none">
+												Charlotte Pelletier is an associate professor in computer science at Univ. Bretagne Sud, Vannes, France. She conducts her research at the Research Institute in information technology and random systems (IRISA) in the Obelix team on the development of new accurate and scalable time-series classification algorithms and time-series domain adaptation techniques for Earth Observation data. Her research interests also include data fusion, super-resolution, processing of mislabelled data, and gap-filling. Since 2022, she has chaired a working group on temporal geospatial data understanding (ISPRS TCII/WG5). Since 2019, she has also co-chaired a technical committee on remote sensing and mapping (IAPR TC7). She co-leads the geodata science track within the Erasmus Mundus Joint Master Degree (EMJMD) named Master Copernicus in Digital Earth.
+											</p>
+										</td>
+									</tr>
+								</tbody>
+								</table>
+						   </td>
 						</tr>
 						<tr>
 						   <td><b>11:10-11:30</b></td>
@@ -117,7 +138,28 @@
 						</tr>
 						<tr>
 						   <td><b>14:00-15:00</b></td>
-						   <td>Invited speaker: Bertrand Le Saux (check below)</td>
+						   <td>
+								<table>
+								<tbody>
+									<tr style="background-color:inherit"> 
+										<td class="tdres" style="border-right: none">
+											<img src="assets/imgs/bertrand.png" alt="Dr Bertrand Le Saux" class="img_inv"> 
+										</td>
+										<td style="padding-left:7px">
+											<p><b>Bertrand Le Saux, European Space Agency</b></p>
+											<p><a id="ber_talk" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">Next-Generation(s) Machine Learning for Earth Observation</a></p>
+											<p id="ber_talk_p" style="display: none">
+												The last decade has witnessed a profound transformation in Earth Observation (EO) through the deep learning revolution, with Artificial Intelligence (AI) being increasingly employed to tackle various EO challenges. However, the unique characteristics of EO data, which are in fine geospatial measurements from diverse sensors, and the intricate nature of underlying physical processes (originating in the Earth system, weather and climate, or human activities), pose significant obstacles. As a result, progress in adopting machine learning techniques varies across applications, and the full potential of these methods remains untapped. This presentation will provide an overview of the past decade's advancements, current status, and challenges in using machine learning for EO, followed by insights into the next stage of the ongoing machine learning revolution, including foundational models and their implications. It will also delve into the future of EO, exploring the emergence of quantum machine learning and quantum computing for EO, as well as the potential of EO processing in modular high-performance computing (HPC) environments.
+											</p>
+											<p><a id="ber_abs" href="javascript:void(0);" tabindex="0" role="button" title="Bio">Bio</a></p>
+											<p id="ber_abs_p" style="display: none">
+												Bertrand Le Saux is a Senior Scientist with the European Space Agency Φ-lab in Frascati, Italy. His research aims at visual understanding of the environment by data-driven techniques including computer vision and (quantum) machine learning. He is interested in tackling practical problems that arise in Earth observation, to bring solutions to current environment and society challenges. He received the Ms.Eng. and M.Sc. degrees from Institut National Polytechnique, Grenoble, France, in 1999, the Ph.D. degree from the University of Versailles/Inria, Versailles, France, in 2003, and the Dr. Habilitation degree from the University of Paris-Saclay, Saclay, France, in 2019. Dr. Le Saux was Co-Chair (2015–2017) and chair (2017–2019) for the IEEE GRSS Technical Committee on Image Analysis and Data Fusion. He is an Associate Editor of the Geoscience and Remote Sensing Letters. He co-organises many workshops and events in machine learning x Earth observation, notably the CVPR Earth Vision workshop series (including this year at CVPR’2023), the ESA - ECMWF workshop series on Machine Learning for Earth System Observation and Prediction, and the Humanitarian Assistance and Disaster Response (HADR) workshop at ICCV'2023.
+											</p>
+										</td>
+									</tr>
+								</tbody>
+								</table>
+							</td>
 						</tr>
 						<tr>
 						   <td><b>15:00-15:50</b></td>
@@ -130,43 +172,6 @@
 					 </tbody>
 					</table>
 				</div>
-				<h5>Invited Speakers</h5>
-				<table>
-					<tbody>
-						<tr class="spaceUnder"> 
-							<td class="tdres">
-								<img src="assets/imgs/223_crop_head.jpg" alt="Dr Charlotte Pelletier" class="img_inv"> 
-							</td>
-							<td style="padding-left:7px">
-								<p><b>Charlotte Pelletier, Univ. Bretagne Sud, Vannes, France</b></p>
-								<p><a id="char_talk" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">Title: Domain adaptation for satellite image time series</a></p>
-								<p id="char_talk_p" style="display: none">
-									The recent developments of deep learning models have significantly improved the classification of satellite image time series (SITS), specifically for land cover mapping and crop-type identification applications. To capture complex temporal patterns like crop phenology, these approaches require a large quantity of correctly labelled data, which may not always be readily accessible in the region of interest or at a given period. One solution is to train a model in a source domain where labels are available and then apply it to the unlabelled target domain. However, when the two domains correspond to geographically or temporally distant regions, the source-trained model might perform poorly when applied to the target domain. The discrepancy arises from the dissimilarity between the source and target data distributions caused by variations in local conditions, such as soil, climate, or farmer practices, which lead to spectral and temporal shifts between the two domains. To mitigate this issue, a range of methods have been developed in recent years, known as unsupervised domain adaptation (UDA) when no target labelled data are available, or semi-supervised domain adaptation (SSDA) when a small amount of labels is accessible. However, these techniques do not account for SITS specificities and do not learn explicitly the temporal shift of SITS when dealing with two geographical areas or do not benefit from the temporal dimension for the same region at a different time, and thus provide only limited benefits for downstream tasks. In this talk, I will introduce recent works on UDA and SSDA that have proven their efficiency in improving SITS classification. In particular, I will present TimeMatch and Match-And-Deform (MAD), two novel UDA techniques tailored for SITS that directly address the temporal shift issue. TimeMatch combines a temporal shift estimation with a semi-supervised learning framework to adapt a model to the unlabelled target region, while MAD leverages optimal transport with dynamic time warping to perform time series matching and timestamp alignment. Both approaches, tested on the TimeMatch dataset, have shown improved performance compared to the state-of-the-art deep time series domain adaptation techniques.
-								</p>
-								<p><a id="char_abs" href="javascript:void(0);" tabindex="0" role="button" title="Bio">Bio</a></p>
-								<p id="char_abs_p" style="display: none">
-									Charlotte Pelletier is an associate professor in computer science at Univ. Bretagne Sud, Vannes, France. She conducts her research at the Research Institute in information technology and random systems (IRISA) in the Obelix team on the development of new accurate and scalable time-series classification algorithms and time-series domain adaptation techniques for Earth Observation data. Her research interests also include data fusion, super-resolution, processing of mislabelled data, and gap-filling. Since 2022, she has chaired a working group on temporal geospatial data understanding (ISPRS TCII/WG5). Since 2019, she has also co-chaired a technical committee on remote sensing and mapping (IAPR TC7). She co-leads the geodata science track within the Erasmus Mundus Joint Master Degree (EMJMD) named Master Copernicus in Digital Earth.
-								</p>
-							</td>
-						</tr>
-						<tr> 
-							<td class="tdres">
-								<img src="assets/imgs/bertrand.png" alt="Dr Bertrand Le Saux" class="img_inv"> 
-							</td>
-							<td style="padding-left:7px">
-								<p><b>Bertrand Le Saux, European Space Agency</b></p>
-								<p><a id="ber_talk" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">Abstract</a></p>
-								<p id="ber_talk_p" style="display: none">
-									TBA
-								</p>
-								<p><a id="ber_abs" href="javascript:void(0);" tabindex="0" role="button" title="Bio">Bio</a></p>
-								<p id="ber_abs_p" style="display: none">
-									Bertrand Le Saux is a Senior Scientist with the European Space Agency Φ-lab in Frascati, Italy. His research aims at visual understanding of the environment by data-driven techniques including computer vision and (quantum) machine learning. He is interested in tackling practical problems that arise in Earth observation, to bring solutions to current environment and society challenges. He received the Ms.Eng. and M.Sc. degrees from Institut National Polytechnique, Grenoble, France, in 1999, the Ph.D. degree from the University of Versailles/Inria, Versailles, France, in 2003, and the Dr. Habilitation degree from the University of Paris-Saclay, Saclay, France, in 2019. Dr. Le Saux was Co-Chair (2015–2017) and chair (2017–2019) for the IEEE GRSS Technical Committee on Image Analysis and Data Fusion. He is an Associate Editor of the Geoscience and Remote Sensing Letters. He co-organises many workshops and events in machine learning x Earth observation, notably the CVPR Earth Vision workshop series (including this year at CVPR’2023), the ESA - ECMWF workshop series on Machine Learning for Earth System Observation and Prediction, and the Humanitarian Assistance and Disaster Response (HADR) workshop at ICCV'2023.
-								</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
 			</div>
 		</div>
 	</div>
