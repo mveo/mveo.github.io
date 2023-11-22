@@ -65,7 +65,25 @@ $(document).ready(function(){
 			$p.css('display', 'none');
 		}
 	});
+
+	$('#jin_talk').click(function(){
+		var $p = $('#jin_talk_p');
+		if ($p.css('display') == 'none'){
+			$p.css('display', 'block');
+		} else {
+			$p.css('display', 'none');
+		}
+	});
 	
+	$('#jin_abs').click(function(){
+		var $p = $('#jin_abs_p');
+		if ($p.css('display') == 'none'){
+			$p.css('display', 'block');
+		} else {
+			$p.css('display', 'none');
+		}
+	});
+
 	$('#paper1').click(function(){
 		var $p = $('#paper1_p');
 		if ($p.css('display') == 'none'){

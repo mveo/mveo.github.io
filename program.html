@@ -70,7 +70,7 @@
 										</td>
 										<td style="padding-left:7px">
 											<p><b>Charlotte Pelletier, Univ. Bretagne Sud, Vannes, France</b></p>
-											<p><a id="char_talk" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">Title: Domain adaptation for satellite image time series</a></p>
+											<p><a id="char_talk" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">Domain adaptation for satellite image time series</a></p>
 											<p id="char_talk_p" style="display: none">
 												The recent developments of deep learning models have significantly improved the classification of satellite image time series (SITS), specifically for land cover mapping and crop-type identification applications. To capture complex temporal patterns like crop phenology, these approaches require a large quantity of correctly labelled data, which may not always be readily accessible in the region of interest or at a given period. One solution is to train a model in a source domain where labels are available and then apply it to the unlabelled target domain. However, when the two domains correspond to geographically or temporally distant regions, the source-trained model might perform poorly when applied to the target domain. The discrepancy arises from the dissimilarity between the source and target data distributions caused by variations in local conditions, such as soil, climate, or farmer practices, which lead to spectral and temporal shifts between the two domains. To mitigate this issue, a range of methods have been developed in recent years, known as unsupervised domain adaptation (UDA) when no target labelled data are available, or semi-supervised domain adaptation (SSDA) when a small amount of labels is accessible. However, these techniques do not account for SITS specificities and do not learn explicitly the temporal shift of SITS when dealing with two geographical areas or do not benefit from the temporal dimension for the same region at a different time, and thus provide only limited benefits for downstream tasks. In this talk, I will introduce recent works on UDA and SSDA that have proven their efficiency in improving SITS classification. In particular, I will present TimeMatch and Match-And-Deform (MAD), two novel UDA techniques tailored for SITS that directly address the temporal shift issue. TimeMatch combines a temporal shift estimation with a semi-supervised learning framework to adapt a model to the unlabelled target region, while MAD leverages optimal transport with dynamic time warping to perform time series matching and timestamp alignment. Both approaches, tested on the TimeMatch dataset, have shown improved performance compared to the state-of-the-art deep time series domain adaptation techniques.
 											</p>
@@ -162,11 +162,40 @@
 							</td>
 						</tr>
 						<tr>
-						   <td><b>15:00-15:50</b></td>
+						   <td><b>15:00-15:40</b></td>
 						   <td>Challenge Results</td>
 						</tr>
 						<tr>
-						   <td><b>15:50-16:00</b></td>
+						   <td><b>15:40-16:00</b></td>
+						   <td>Tea Break</td>
+						</tr>
+						<tr>
+						   <td><b>16:00-16:50</b></td>
+						   <td>
+								<table>
+								<tbody>
+									<tr style="background-color:inherit"> 
+										<td class="tdres" style="border-right: none">
+											<img src="assets/imgs/jren.jpg" alt="Professor Jinchang Ren" class="img_inv"> 
+										</td>
+										<td style="padding-left:7px">
+											<p><b>Professor Jinchang Ren, National Subsea Centre</b></p>
+											<p><a id="jin_talk" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">Multimodal Sensing and Machine Learning for Effective Remote Sensing Earth Observation and Industrial Automation</a></p>
+											<p id="jin_talk_p" style="display: none">
+												Machine learning enabled smart multimodal sensing is essential for effective remote sensing earth observation, which includes not only conventional cameras but also SAR, LiDAR, thermal, multispectral and even hyperspectral imaging. These can be particularly useful for more accurate, timely and cost-effective sensing and mapping of the earth as well as condition monitoring and non-destructive inspection of the environment and industrial automation. In this talk, related work will be presented, covering from land mapping, change detection, precision agriculture and natural disaster assessment to subsea infrastructure inspection, ocean colour remote sensing and arctic sea ice segmentation as well as a few industrial automation applications. Multimodal image fusion enabled big data analytics are focused, driven by advanced image processing, computer vision and AI machine learning techniques.
+											</p>
+											<p><a id="jin_abs" href="javascript:void(0);" tabindex="0" role="button" title="Bio">Bio</a></p>
+											<p id="jin_abs_p" style="display: none">
+												Jinchang Ren received his B. Eng. degree in computer software, M.Eng. in image processing, and D. Eng. in computer vision, all from Northwestern Polytechnical University, Xi'an, China. He was also awarded a Ph.D. degree in Electronic Imaging and Media Communication from the University of Bradford, Bradford, U.K. Currently he is a full Professor of Computing Sciences, Transparent Ocean Lead, and Director of the Hyperspectral Imaging Lab at the National Subsea Centre (NSC), Robert Gordon University, Aberdeen, U.K. Dr. Ren is a Senior Member of IEEE. His research interests focus mainly on hyperspectral imaging, image processing, computer vision, big data analytics and machine learning. He has published 350+ peer reviewed journal/conferences articles, and acts as an Associate Editor for several international journals including IEEE TGRS and J. of the Franklin Institute et al. He has also chaired and co-chaired a number of conferences and workshops. His students have received many awards, including the Best PhD thesis from IET Image and Vision Section and various conferences/workshops.
+											</p>
+										</td>
+									</tr>
+								</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+						   <td><b>16:50-17:00</b></td>
 						   <td>Closing</td>
 						</tr>
 					 </tbody>
