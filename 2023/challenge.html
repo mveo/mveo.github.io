@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Workshop on Machine Vision for Earth Observation and Environment Monitoring">
+	
+    <title>Workshop on Machine Vision for Earth Observation and Environment Monitoring</title>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Bootstrap + Creative Design main styles -->
+	<link rel="stylesheet" href="assets/css/creative-design.css">
+
+</head>
+<body>
+
+    <!----------------------------------------------------------------------- Page Header -------------------------------------------------------------->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content">
+            <h2>Workshop on Machine Vision for Earth Observation and Environment Monitoring<h2>
+			<div style="padding-top: 10px;">
+				<h5>in conjunction with the British Machine Vision Conference (BMVC) 2023 </h5> 
+			</div>
+        </div>
+    </header>
+	<!-- End of Page Header -->    
+    
+	<div class="maintable">
+	<div class="trow">
+		<div class="cell1">
+			<!--<div class="container">-->
+				<nav class="collapse show navbar navbar-vertical navbar-light align-items-start border-0">
+					<div class="navbar-nav w-100 overflow-hidden">
+						<a href="index.html" class="nav-item nav-link">Aims and Scope</a>
+						<a href="dates.html" class="nav-item nav-link">Important Dates</a>
+						<a href="#" class="nav-item nav-link active">Challenge</a>
+						<a href="submission.html" class="nav-item nav-link">Submission</a>
+						<a href="program.html" class="nav-item nav-link">Program</a>
+						<a href="https://bmvc2023.org/" target="_blank" class="nav-item nav-link">BMVC 2023</a>
+						<a href="location.html" class="nav-item nav-link">Location</a>
+						<a href="people.html" class="nav-item nav-link">People</a>
+						<a href="sponsors.html" class="nav-item nav-link">Sponsors</a>
+					</div>
+				</nav>
+			<!--</div>-->
+		</div>
+		
+		<div class="cell2">
+			<div class="container">
+				<h4>Data-Centric Land Cover Classification Challenge</h4>
+					<p>
+						Curating, labeling, and working with large data sets requires a significant investment of energy, time, and money. Focusing on a core set of the most valuable samples, tailored to the task at hand, can effectively reduce these costs. Such data-centric approaches that prioritize value and quality over quantity have the potential to achieve this goal. This relatively recent trend in the field of machine learning shifts the focus from improving machine learning models, also known as model-centric machine learning, to optimize the data used to train these models, including how this data is presented during the learning process.
+					</p>
+					
+				<h5>Challenge Summary</h5>
+					<p>
+						The data-centric land cover classification challenge, as part of the Workshop on Machine Vision for Earth Observation and Environment Monitoring and the British Machine Vision Conference (BMVC) 2023, aims at novel data-centric approaches towards selecting a core set of training samples for a <strong>semantic segmentation task</strong>. 
+					</p>
+					<p>
+						Participants of this challenge are asked to develop a ranking strategy that assigns a score to each sample from a pool of candidate examples based on each sample's importance to the training procedure. The generated score/ranking will then be used to select a core set of training samples to train a pre-defined classifier, in this case a <a href="https://arxiv.org/abs/1505.04597" target="_blank">U-Net</a>. Success is measured by training the aforementioned classifier multiple times using training datasets of different sizes based on the given ranking/scores (for example, by training a model using the top 1000 and the top 500 samples) and calculating the average Jaccard index using an undisclosed test dataset for the trained models.
+					</p>
+					
+				<h5>Dataset</h5>
+				<p>
+					The challenge will use the <a href="https://www.grss-ieee.org/community/technical-committees/2022-ieee-grss-data-fusion-contest/" target="_blank">Data Fusion Contest 2022 dataset</a>. For this challenge, 90% of the training set images were divided into patches (of 256x256 pixels) thus composing the pool of candidate samples for training. 10% of the training images are part of a validation dataset. Finally, the evaluation will be carried out using the undisclosed test set. The dataset can be openly downloaded at <a href="https://ieee-dataport.org/competitions/data-fusion-contest-2022-dfc2022" target="_blank">ieee-dataport.org/competitions/data-fusion-contest-2022-dfc2022</a>.
+				</p>
+				
+				<h5>Resources (including pool)</h5>
+				<p>
+					Participants can find some resources available <a href="https://github.com/mveo/mveo-challenge" target="_blank">here</a>.
+					In this repo, participants can find:
+					<ul class="general">
+						<li class="general">an initial code to train the U-Net model using the pool of candidate samples</li>
+						<li class="general">the pool of training candidate samples (file <a href="https://github.com/mveo/mveo-challenge/blob/main/train_coordinate_list.txt" target="_blank">train_coordinate_list.txt</a>)</li>
+						<li class="general">the list of validation images (file <a href="https://github.com/mveo/mveo-challenge/blob/main/val_image_list.txt" target="_blank">val_image_list.txt</a>)</li>
+					</ul>
+				</p>
+				
+				<h5>Submission</h5>
+				<p>
+					First, participants should download the <a href="https://github.com/mveo/mveo-challenge/blob/main/train_coordinate_list.txt" target="_blank">pool of candidate samples</a>.
+					Each row of this file represents a candidate sample for the training and is composed of 5 columns:
+				<p>
+				<p>
+					<em>< name of the city > < name of the image > < patch x coordinate > < patch y coordinate > < sample score (float from 0.0 to 1.0) ></em>
+				</p>
+				<p>
+					Currently, all samples have the same score/importance (i.e., <em>1.0</em>). As mentioned before, the main objective of the participants is to develop a ranking system that assigns different scores (from 0.0 (low priority) to 1.0 (high priority)) to the candidate samples depending on their importance to the training procedure.
+				</p>
+				<p>
+					The <strong>final submission</strong> must be a file with all candidate samples, each with the same 5 columns, but varying the score depending on the importance of the example. This file must be sent to <a href="data-centric-challenge-mveo@googlegroups.com">data-centric-challenge-mveo@googlegroups.com</a>, with title <strong>[MVEO Challenge Submission TEAMNAME]</strong>, where TEAMNAME should be the name of your team for the leaderboard (below).
+				</p>
+			
+				<h5>Leaderboard</h5>
+				<p>
+					Submissions will be evaluated by training multiple U-Net models using training datasets of different sizes (1%, 10%, and 25%, specifically) based on the given ranking/scores and calculating the average Jaccard index using an undisclosed test dataset for all trained models.
+					<em>Note that for each training dataset size/percentage (1%, 10%, and 25%) 2 runs will be performed (for stability purposes) and average will be used.</em>
+					Then final result generated by each submission will then be included into the leaderboard below, <strong>which will be updated according to the timeline and deadlines below</strong>. <em>Please note that the update will happen at certain times, i.e. it will not be triggered by a new submission. This means, participants will not see their newest results right away.</em> 
+				</p>
+
+				<div>
+					<table class="table table-striped">
+					 <thead>
+						<tr>
+						   <th scope="col">Team Name</th>
+						   <th scope="col">Submission date</th>
+						   <th scope="col">mIoU</th>
+						   <th scope="col">1% IoU</th>
+						   <th scope="col">10% IoU</th>
+						   <th scope="col">25% IoU</th>
+						</tr>
+					 </thead>
+					 <tbody>
+						<tr>
+						   <td>Baseline (100%)</td>
+						   <td></td>
+						   <td>0.1222</td>
+						   <td></td>
+						   <td></td>
+						   <td></td>
+						</tr>
+						<tr>
+						   <td>AI4GG</td>
+						   <td>29 October</td>
+						   <td>0.1113</td>
+						   <td>0.0882</td>
+						   <td>0.1233</td>
+						   <td>0.1223</td>
+						</tr>
+						<tr>
+						   <td>AI4GG</td>
+						   <td>7 November</td>
+						   <td>0.1082</td>
+						   <td>0.0953</td>
+						   <td>0.1123</td>
+						   <td>0.1171</td>
+						</tr>
+						<tr>
+						   <td>AI4GG</td>
+						   <td>2 October</td>
+						   <td>0.1056</td>
+						   <td>0.0921</td>
+						   <td>0.1125</td>
+						   <td>0.1124</td>
+						</tr>
+						<tr>
+						   <td>CodisLab_Cardiff</td>
+						   <td>5 November</td>
+						   <td>0.1032</td>
+						   <td>0.0780</td>
+						   <td>0.1178</td>
+						   <td>0.1138</td>
+						</tr>
+						<tr>
+						   <td>CodisLab_Cardiff</td>
+						   <td>19 October</td>
+						   <td>0.1021</td>
+						   <td>0.0802</td>
+						   <td>0.1099</td>
+						   <td>0.1163</td>
+						</tr>
+						<tr>
+						   <td>Baseline (Random 1, 10, and 25%)</td>
+						   <td></td>
+						   <td>0.1016</td>
+						   <td>0.0952</td>
+						   <td>0.0998</td>
+						   <td>0.1098</td>
+						</tr>
+						<tr>
+						   <td>CodisLab_Cardiff</td>
+						   <td>27 October</td>
+						   <td>0.1000</td>
+						   <td>0.0835</td>
+						   <td>0.1076</td>
+						   <td>0.1088</td>
+						</tr>
+						<tr>
+						   <td>NIRA</td>
+						   <td>6 November</td>
+						   <td>0.0932</td>
+						   <td>0.0909</td>
+						   <td>0.0901</td>
+						   <td>0.0986</td>
+						</tr>
+						<tr>
+						   <td>AI4GG</td>
+						   <td>13 October</td>
+						   <td>0.0856</td>
+						   <td>0.0435</td>
+						   <td>0.1019</td>
+						   <td>0.1113</td>
+						</tr>
+						<tr>
+						   <td>CodisLab_Cardiff</td>
+						   <td>15 October</td>
+						   <td>0.0745</td>
+						   <td>0.0530</td>
+						   <td>0.0723</td>
+						   <td>0.0981</td>
+						</tr>
+					 </tbody>
+					</table>
+				</div>
+				
+				<h5>Timeline</h5>
+				<p>
+					Participants may submit multiple and intermediate solutions, which will be evaluated following the timetable below. All submitted solutions will be listed on the leaderboard. <em>Once a solution has been submitted, assessed, and listed in the leaderboard below, it can not be removed.</em>
+				</p>
+
+				<div>
+					<table class="table table-striped">
+					 <thead>
+						<tr>
+						   <th scope="col">Subject</th>
+						   <th scope="col">Date (all deadlines 23:59 UK Time)</th>
+						</tr>
+					 </thead>
+					 <tbody>
+						<tr>
+						   <td>Intermediate Deadline 1 (to submit intermediate ranking files)</td>
+						   <td>Sunday, 1 October 2023</td>
+						</tr>
+						<tr>
+						   <td>Intermediate Deadline 2 (to submit intermediate ranking files)</td>
+						   <td>Sunday, 15 October 2023</td>
+						</tr>
+						<tr>
+						   <td>Intermediate Deadline 3 (to submit intermediate ranking files)</td>
+						   <td>Sunday, 29 October 2023</td>
+						</tr>
+						<tr>
+						   <td>Final Submission Deadline (to submit the final ranking file)</td>
+						   <td>Monday, 6 November 2023</td>
+						</tr>
+						<tr>
+						   <td>Publication of Final Results</td>
+						   <td>Friday, 17 November 2023</td>
+						</tr>
+						<tr>
+						   <td>Workshop</td>
+						   <td>Friday, 24 November 2023</td>
+						</tr>
+					 </tbody>
+					</table>
+				</div>
+				
+				<h5>Results, Presentation, Awards, and Prizes</h5>
+				<p>
+					The final results of this challenge will be presented during the Workshop.
+					The authors of the 1st to 3rd-ranked teams will be invited to present their approaches at the Workshop in Aberdeen/UK, on 24 November 2023.
+					These authors will also be invited to co-author a journal paper which will summarize the outcome of this challenge and will be submitted with open access to IEEE JSTARS.
+				</p>
+				
+				<h5>Organizers</h5>
+					<p>Keiller Nogueira, University of Stirling, UK<br>
+					Ribana Roscher, Research Center Jülich and University of Bonn, Germany<br>
+					Ronny Hänsch, German Aerospace Center (DLR), Germany</p>
+					
+				<h5>Terms and Conditions</h5>
+					<p>Participants of this challenge acknowledge that they have read and agree to the Dataset Terms and Conditions described here: <a href="https://www.grss-ieee.org/community/technical-committees/2022-ieee-grss-data-fusion-contest/" target="_blank">https://www.grss-ieee.org/community/technical-committees/2022-ieee-grss-data-fusion-contest/</a>.</p>
+					
+				<img src="assets/imgs/isprs_logo.jpg" alt="ISPRS logo" style="width: 200px; display: block; margin-left: auto; margin-right: auto;" class="img_inv"> 
+			</div>
+		</div>
+	</div>
+	</div>
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Creative Design js -->
+    <script src="assets/js/creative-design.js"></script>
+
+</body>
+</html>
