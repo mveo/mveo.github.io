@@ -54,11 +54,87 @@
 			<div class="container">
 				<h4>Data-Centric Land Cover Classification Challenge</h4>
 					<p>
-						Curating, labeling, and working with large data sets requires a significant investment of energy, time, and money. Focusing on a core set of the most valuable samples, tailored to the task at hand, can effectively reduce these costs. Such data-centric approaches that prioritize value and quality over quantity have the potential to achieve this goal. This relatively recent trend in the field of machine learning shifts the focus from improving machine learning models, also known as model-centric machine learning, to optimize the data used to train these models, including how this data is presented during the learning process.
+						In supervised semantic segmentation, obtaining fully accurate and reliable labels is often challenging and costly. Labels are frequently contaminated by noise due to factors such as limited information, human labeling errors, or encoding mistakes. In the real-world, label noise is ubiquitous and can significantly degrade the performance of trained machine learning models. Therefore, it is essential to develop methods capable of automatically identifying noisy samples prior to training, allowing machine learning models to be optimized based on the cleanest and most reliable data available.
+					</p>
+				<h5>Challenge Summary</h5>		
+					<p>
+						The data-centric land cover classification challenge, as part of the Workshop on Machine Vision for Earth Observation and Environment Monitoring and the British Machine Vision Conference (BMVC) 2024, aims at novel data-centric approaches towards identifying noisy samples for a <strong>semantic segmentation task</strong>. 
+					</p>
+					<p>
+						Participants of this challenge are asked to develop an AI-based system that ranks the image samples based on their noise levels. Success is measured by comparing the submitted ranking with an undisclosed official one and calculating the <a href="https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient" target="_blank">Kendall Tau</a> score.
+					</p>
+					<p>
+						Please, check for more info on <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge/" target="_blank">Kaggle</a>.
 					</p>
 					
+				<h5>Dataset</h5>
 					<p>
-						More details to be released soon.
+						The challenge will use this <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge/data" target="_blank">dataset</a>, which is composed of 5,000 256x256 images and their corresponding (noisy) labels. The labels were annotated into two classes: background (encoded as 0 in the label data) and building (encoded as 1 in the label data).
+					</p>
+					<p>
+						More info on <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge/data" target="_blank">Kaggle</a>.
+					</p>
+
+
+				<h5>Submission</h5>			
+					<p>
+						After generating the ranking of all images (from least to most noisy), you must create a file with a header and the following format:
+					</p>
+					<code>
+						id,imageid<br>
+						0,1_26_72_418_418.png<br>
+						1,2_19_53_0_627.png<br>
+						2,2_22_42_627_0.png<br>
+						etc.
+					</code>
+					<p>
+						The id is NOT relevant and is NOT used in the evaluation process. The imageid column should have the name of images (for example, <code>1_26_72_418_418.png</code>) in order from least to most noisy.
+					</p>
+					<p>
+						After creating this file, please submit it on <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge/submissions" target="_blank">Kaggle</a>.
+					</p>
+				
+				<h5>Timeline</h5>
+					<p>
+						Participants may submit multiple solutions. All submitted solutions will be listed on the leaderboard.
+					</p>
+
+					<div>
+						<table class="table table-striped">
+						 <thead>
+							<tr>
+							   <th scope="col">Subject</th>
+							   <th scope="col">Date</th>
+							</tr>
+						 </thead>
+						 <tbody>
+							<tr>
+							   <td>Submission Deadline</td>
+							   <td>Sunday, 10 November 2024</td>
+							</tr>
+							<tr>
+							   <td>Workshop</td>
+							   <td>Thursday, 28 November 2024</td>
+							</tr>
+						 </tbody>
+						</table>
+					</div>
+				
+				<h5>Results, Presentation, Awards, and Prizes</h5>
+					<p>
+						The final results of this challenge will be presented during the Workshop.
+						The authors of the top-ranked methods will be invited to present their approaches at the Workshop in Glasgow/UK, on 28 November 2024.
+						These authors will also be invited to co-author a journal paper which will summarize the outcome of this challenge and will be submitted with open access to IEEE JSTARS.
+					</p>
+				
+				<h5>Organizers</h5>
+					<p>
+						Keiller Nogueira, University of Liverpool, UK<br>
+						Ronny Hänsch, German Aerospace Center (DLR), Germany<br>
+						June Moh Goo, University College London (UCL), UK<br>
+						Zichao Zeng, University College London (UCL), UK<br>
+						Pallavi Jain, Inria, France<br>
+						Zhipeng Liu, University of Exeter, UK
 					</p>
 			</div>
 		</div>
