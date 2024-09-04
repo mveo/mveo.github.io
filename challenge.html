@@ -58,10 +58,10 @@
 					</p>
 				<h5>Challenge Summary</h5>		
 					<p>
-						The data-centric land cover classification challenge, as part of the Workshop on Machine Vision for Earth Observation and Environment Monitoring and the British Machine Vision Conference (BMVC) 2024, aims at novel data-centric approaches towards identifying noisy samples for a <strong>semantic segmentation task</strong>. 
+						The data-centric land cover classification challenge, as part of the Workshop on Machine Vision for Earth Observation and Environment Monitoring and the British Machine Vision Conference (BMVC) 2024, aims at novel data-centric approaches towards identifying noisy labels for a <strong>semantic segmentation task</strong>. 
 					</p>
 					<p>
-						Participants of this challenge are asked to develop an AI-based system that ranks the image samples based on their noise levels. Success is measured by comparing the submitted ranking with an undisclosed official one and calculating the <a href="https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient" target="_blank">Kendall Tau</a> score.
+						Participants of this challenge are asked to develop an AI-based system that ranks the samples based on their levels of label noise. Success is measured by comparing the submitted ranking with an undisclosed official one and calculating the <a href="https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient" target="_blank">Kendall Tau</a> score.
 					</p>
 					<p>
 						Please, check for more info on <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge/" target="_blank">Kaggle</a>.
@@ -69,7 +69,7 @@
 					
 				<h5>Dataset</h5>
 					<p>
-						The challenge will use this <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge/data" target="_blank">dataset</a>, which is composed of 5,000 256x256 images and their corresponding (noisy) labels. The labels were annotated into two classes: background (encoded as 0 in the label data) and building (encoded as 1 in the label data).
+						The challenge will use this <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge/data" target="_blank">dataset</a>, which is composed of 5,000 256x256 images and their corresponding (noisy) labels. The labels consist of two classes: background (encoded as 0 in the label data) and building (encoded as 1 in the label data).
 					</p>
 					<p>
 						More info on <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge/data" target="_blank">Kaggle</a>.
@@ -78,7 +78,7 @@
 
 				<h5>Submission</h5>			
 					<p>
-						After generating the ranking of all images (from least to most noisy), you must create a file with a header and the following format:
+						After generating the ranking (from least to most noisy), you must create a file with a header and the following format:
 					</p>
 					<code>
 						id,imageid<br>
@@ -88,7 +88,7 @@
 						etc.
 					</code>
 					<p>
-						The id is NOT relevant and is NOT used in the evaluation process. The imageid column should have the name of images (for example, <code>1_26_72_418_418.png</code>) in order from least to most noisy.
+						The id is NOT relevant and is NOT used in the evaluation process. The imageid column should have the name of labels/images (for example, <code>1_26_72_418_418.png</code>) in order from least to most noisy.
 					</p>
 					<p>
 						After creating this file, please submit it on <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge/submissions" target="_blank">Kaggle</a>.
