@@ -30,8 +30,8 @@ $(document).ready(function(){
         } 
     });
 	
-	$('#char_talk').click(function(){
-		var $p = $('#char_talk_p');
+	$('#char_talk1').click(function(){
+		var $p = $('#char_talk_p1');
 		if ($p.css('display') == 'none'){
 			$p.css('display', 'block');
 		} else {
@@ -39,26 +39,8 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('#char_abs').click(function(){
-		var $p = $('#char_abs_p');
-		if ($p.css('display') == 'none'){
-			$p.css('display', 'block');
-		} else {
-			$p.css('display', 'none');
-		}
-	});
-	
-	$('#ber_talk').click(function(){
-		var $p = $('#ber_talk_p');
-		if ($p.css('display') == 'none'){
-			$p.css('display', 'block');
-		} else {
-			$p.css('display', 'none');
-		}
-	});
-	
-	$('#ber_abs').click(function(){
-		var $p = $('#ber_abs_p');
+	$('#char_abs1').click(function(){
+		var $p = $('#char_abs_p1');
 		if ($p.css('display') == 'none'){
 			$p.css('display', 'block');
 		} else {
@@ -66,8 +48,8 @@ $(document).ready(function(){
 		}
 	});
 
-	$('#jin_talk').click(function(){
-		var $p = $('#jin_talk_p');
+	$('#char_talk2').click(function(){
+		var $p = $('#char_talk_p2');
 		if ($p.css('display') == 'none'){
 			$p.css('display', 'block');
 		} else {
@@ -75,8 +57,8 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('#jin_abs').click(function(){
-		var $p = $('#jin_abs_p');
+	$('#char_abs2').click(function(){
+		var $p = $('#char_abs_p2');
 		if ($p.css('display') == 'none'){
 			$p.css('display', 'block');
 		} else {
