@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Workshop on Machine Vision for Earth Observation and Environment Monitoring">
+	
+    <title>Workshop on Machine Vision for Earth Observation and Environment Monitoring</title>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Bootstrap + Creative Design main styles -->
+	<link rel="stylesheet" href="assets/css/creative-design.css">
+
+</head>
+<body>
+
+    <!----------------------------------------------------------------------- Page Header -------------------------------------------------------------->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content">
+            <h2>Workshop on Machine Vision for Earth Observation and Environment Monitoring<h2>
+			<div style="padding-top: 10px;">
+				<h5>in conjunction with the British Machine Vision Conference (BMVC) 2024 </h5> 
+			</div>
+        </div>
+    </header>
+	<!-- End of Page Header -->    
+    
+	<div class="maintable">
+	<div class="trow">
+		<div class="cell1">
+			<!--<div class="container">-->
+				<nav class="collapse show navbar navbar-vertical navbar-light align-items-start border-0">
+					<div class="navbar-nav w-100 overflow-hidden">
+						<a href="index.html" class="nav-item nav-link">Aims and Scope</a>
+						<a href="dates.html" class="nav-item nav-link">Important Dates</a>
+						<a href="#" class="nav-item nav-link active">Challenge</a>
+						<a href="submission.html" class="nav-item nav-link">Submission</a>
+						<a href="program.html" class="nav-item nav-link">Program</a>
+						<a href="https://bmvc2024.org/" target="_blank" class="nav-item nav-link">BMVC 2024</a>
+						<a href="location.html" class="nav-item nav-link">Location</a>
+						<a href="people.html" class="nav-item nav-link">People</a>
+						<a href="sponsors.html" class="nav-item nav-link">Sponsors</a>
+					</div>
+				</nav>
+			<!--</div>-->
+		</div>
+		
+		<div class="cell2">
+			<div class="container">
+				<h4>Data-Centric Land Cover Classification Challenge</h4>
+					<p>
+						In supervised semantic segmentation, obtaining fully accurate and reliable labels is often challenging and costly. Labels are frequently contaminated by noise due to factors such as limited information, human labeling errors, or encoding mistakes. In the real-world, label noise is ubiquitous and can significantly degrade the performance of trained machine learning models. Therefore, it is essential to develop methods capable of automatically identifying noisy samples prior to training, allowing machine learning models to be optimized based on the cleanest and most reliable data available.
+					</p>
+				<h5>Challenge Summary</h5>		
+					<p>
+						The data-centric land cover classification challenge, as part of the Workshop on Machine Vision for Earth Observation and Environment Monitoring and the British Machine Vision Conference (BMVC) 2024, aims at novel data-centric approaches towards identifying noisy labels for a <strong>semantic segmentation task</strong>. 
+					</p>
+					<p>
+						Participants of this challenge are asked to develop an AI-based system that ranks the samples based on their levels of label noise. Success is measured by comparing the submitted ranking with an undisclosed official one and calculating the <a href="https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient" target="_blank">Kendall Tau</a> score.
+					</p>
+					<p>
+						Please, check for more info on <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge/" target="_blank">Kaggle</a>.
+					</p>
+					
+				<h5>Dataset</h5>
+					<p>
+						The challenge will use this <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge/data" target="_blank">dataset</a>, which is composed of 5,000 256x256 images and their corresponding (noisy) labels. The labels consist of two classes: background (encoded as 0 in the label data) and building (encoded as 1 in the label data).
+					</p>
+					<p>
+						More info on <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge/data" target="_blank">Kaggle</a>.
+					</p>
+
+
+				<h5>Submission</h5>			
+					<p>
+						After generating the ranking (from least to most noisy), you must create a file with a header and the following format:
+					</p>
+					<code>
+						id,imageid<br>
+						0,1_26_72_418_418.png<br>
+						1,2_19_53_0_627.png<br>
+						2,2_22_42_627_0.png<br>
+						etc.
+					</code>
+					<p>
+						The id is NOT relevant and is NOT used in the evaluation process. The imageid column should have the name of labels/images (for example, <code>1_26_72_418_418.png</code>) in order from least to most noisy.
+					</p>
+					<p>
+						After creating this file, please submit it on <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge/submissions" target="_blank">Kaggle</a>.
+					</p>
+				
+				<h5>Timeline</h5>
+					<p>
+						Participants may submit multiple solutions. All submitted solutions will be listed on the leaderboard.
+					</p>
+
+					<div>
+						<table class="table table-striped">
+						 <thead>
+							<tr>
+							   <th scope="col">Subject</th>
+							   <th scope="col">Date</th>
+							</tr>
+						 </thead>
+						 <tbody>
+							<tr>
+							   <td>Submission Deadline</td>
+							   <td>Sunday, 10 November 2024</td>
+							</tr>
+							<tr>
+							   <td>Workshop</td>
+							   <td>Thursday, 28 November 2024</td>
+							</tr>
+						 </tbody>
+						</table>
+					</div>
+				
+				<h5>Results, Presentation, Awards, and Prizes</h5>
+					<p>
+						The final results of this challenge will be presented during the Workshop.
+						The authors of the top-ranked methods will be invited to present their approaches at the Workshop in Glasgow/UK, on 28 November 2024.
+						These authors will also be invited to co-author a journal paper which will summarize the outcome of this challenge and will be submitted with open access to IEEE JSTARS.
+					</p>
+				
+				<h5>Organizers</h5>
+					<p>
+						Keiller Nogueira, University of Liverpool, UK<br>
+						Ronny Hänsch, German Aerospace Center (DLR), Germany<br>
+						June Moh Goo, University College London (UCL), UK<br>
+						Zichao Zeng, University College London (UCL), UK<br>
+						Pallavi Jain, Inria, France<br>
+						Zhipeng Liu, University of Exeter, UK
+					</p>
+			</div>
+		</div>
+	</div>
+	</div>
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Creative Design js -->
+    <script src="assets/js/creative-design.js"></script>
+
+</body>
+</html>

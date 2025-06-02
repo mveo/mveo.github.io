@@ -23,7 +23,7 @@
         <div class="header-content">
             <h2>Workshop on Machine Vision for Earth Observation and Environment Monitoring<h2>
 			<div style="padding-top: 10px;">
-				<h5>in conjunction with the British Machine Vision Conference (BMVC) 2024 </h5> 
+				<h5>in conjunction with the British Machine Vision Conference (BMVC) 2025 </h5> 
 			</div>
         </div>
     </header>
@@ -40,7 +40,7 @@
 						<a href="challenge.html" class="nav-item nav-link">Challenge</a>
 						<a href="submission.html" class="nav-item nav-link">Submission</a>
 						<a href="#" class="nav-item nav-link active">Program</a>
-						<a href="https://bmvc2024.org/" target="_blank" class="nav-item nav-link">BMVC 2024</a>
+						<a href="https://bmvc2025.bmva.org/" target="_blank" class="nav-item nav-link">BMVC 2025</a>
 						<a href="location.html" class="nav-item nav-link">Location</a>
 						<a href="people.html" class="nav-item nav-link">People</a>
 						<a href="sponsors.html" class="nav-item nav-link">Sponsors</a>
@@ -52,127 +52,10 @@
 		
 		<div class="cell2">
 			<div class="container">
-				<h4>Tentative Program</h4>
-				<div>
-					<table class="table table-striped">
-					 <tbody>
-						<tr>
-						   <td><b>14:00-14:05</b></td>
-						   <td>Welcome</td>
-						</tr>
-						<tr>
-						   <td><b>14:05-14:55</b></td>
-						   <td>
-								<table>
-								<tbody>
-									<tr style="background-color:inherit"> 
-										<td class="tdres" style="border-right: none">
-											<img src="assets/imgs/sylvain.webp" alt="Dr Sylvain Lobry" class="img_inv"> 
-										</td>
-										<td style="padding-left:7px">
-											<p><b>Sylvain Lobry, Université Paris Cité, France</b></p>
-											<p><a id="char_talk1" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">Foundation models for remote sensing: which one(s)?</a></p>
-											<p id="char_talk_p1" style="display: none">
-												Recently, the first developments of foundation models for remote sensing imagery have appeared. These models, trained on large quantities of varied data and adaptable to many specific tasks, have the advantage of addressing a frequent problem in remote sensing: the difficulty of obtaining supervision data. Through a number of case studies at various geographical scales, we will highlight the different issues that arise when formulating models using remotely sensed images. We compare these issues with the first developments of foundation models, to identify new research directions.
-											</p>
-											<p><a id="char_abs1" href="javascript:void(0);" tabindex="0" role="button" title="Bio">Bio</a></p>
-											<p id="char_abs_p1" style="display: none">
-												Sylvain Lobry is an assistant professor in Computer Science since 2020. He is a researcher at the SIP team of the LIPADE laboratory and teaches at UFR de Mathématiques et Informatique in Université Paris Cité. He obtained his PhD in image processing from Télécom Paris in 2017. His research interests are in the areas of methodological developments in image processing with applications in particular to remote sensing imagery. This includes high-resolution optical images processing using deep learning techniques and change detection, classification and regularization on multi-temporal series of SAR images using Markov Random Fields models. During his PhD, he was working on the SWOT mission, dedicated to the study of the world’s oceans and its terrestrial surface waters. Since 2019, he also works on the interactions between remote sensing data and natural language. In particular, he introduced the task of Visual Question Answering for Remote Sensing (RSVQA).
-											</p>
-										</td>
-									</tr>
-								</tbody>
-								</table>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>14:55-15:15</b></td>
-						   <td>
-								<p><a id="paper1" href="javascript:void(0);" tabindex="0" role="button">MALPOLON: A Framework for Deep Species Distribution Modeling</a></p>
-								<i>Theo Larcher (INRIA, France), Lukas Picek (INRIA, France & University of West Bohemia, Czechia), Benjamin Deneu (Swiss Federal Institute for Forest, Snow and Landscape Research, Switzerland), Titouan Lorieul, Maximilien Servajean (INRIA, France & Université Paul Valéry, France), Alexis Joly (INRIA, France)</i>
-								<p id="paper1_p" style="display: none">
-									<br/>
-									This paper describes a deep-SDM framework, MALPOLON. Written in Python and built upon the PyTorch library, this framework aims to facilitate training and inferences of deep species distribution models (deep-SDM) and sharing for users with only general Python language skills (e.g., modeling ecologists) who are interested in testing deep learning approaches to build new SDMs. More advanced users can also benefit from the framework’s modularity to run more specific experiments by overriding existing classes while taking advantage of press-button examples to train neural networks on multiple classification tasks using custom or provided raw and pre-processed datasets. The framework is open-sourced on GitHub and PyPi along with extensive documentation and examples of use in various scenarios. MALPOLON offers straightforward installation, YAML-based configuration, parallel computing, multi-GPU utilization, baseline and foundational models for benchmarking, and extensive tutorials/documentation, aiming to enhance accessibility and performance scalability for ecologists and researchers.
-								</p>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>15:15-15:35</b></td>
-						   <td>
-								<p><a id="paper2" href="javascript:void(0);" tabindex="0" role="button">How Effective is Pre-training of Large Masked Autoencoders for Downstream Earth Observation Tasks?</a></p>
-								<i>Jose Sosa (University of Luxembourg), Mohamed Aloulou (University of Luxembourg), Danila Rukhovich (University of Luxembourg), Rim Sleimi (University of Luxembourg), Boonyarit Changaival (Hydrosat, Luxembourg), Anis Kacem (University of Luxembourg), Djamila Aouada (University of Luxembourg)</i>
-								<p id="paper2_p" style="display: none">
-									<br/>
-									Self-supervised pre-training has proven highly effective for many computer vision tasks, particularly when labelled data are scarce. In the context of Earth Observation (EO), foundation models and various other Vision Transformer (ViT)-based approaches have been successfully applied for transfer learning to downstream tasks. However, it remains unclear under which conditions pre-trained models offer significant advantages over training from scratch. In this study, we investigate the effectiveness of pre-training ViT-based Masked Autoencoders (MAE) for downstream EO tasks, focusing on reconstruction, segmentation, and classification. We consider two large ViT-based MAE pretrained models: a foundation model (Prithvi) and SatMAE. We evaluate Prithvi on reconstruction and segmentation-based downstream tasks, and for SatMAE we assess its performance on a classification downstream task. Our findings suggest that pre-training is particularly beneficial when the fine-tuning task closely resembles the pre-training task, e.g. reconstruction. In contrast, for tasks such as segmentation or classification, training from scratch with specific hyperparameter adjustments proved to be equally or more effective.
-								</p>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>15:35-15:55</b></td>
-						   <td>
-								<p><a id="paper3" href="javascript:void(0);" tabindex="0" role="button">Automated trash screen blockage segmentation using deep learning</a></p>
-								<i>Remy Vandaele (University of Exeter, UK), Sarah L. Dance (University of Reading, UK), Hywel T.P. Williams (University of Exeter, UK), Varun Ojha (Newcastle University, UK)</i>
-								<p id="paper3_p" style="display: none">
-									<br/>
-									Trash screens are used to prevent floating debris from damaging critical assets (e.g. pipes, pumping stations) in rivers. However, debris accumulates at the trash screen location and can contribute to floods. Here we develop a novel application of deep learning that uses cameras to automatically monitor the presence and amount of trash on trash screens. We manually annotated debris in 575 trash screen images from 54 cameras and used this dataset to train and evaluate the performance of several semantic segmentation networks. This process reaches segmentation accuracy above 95% MIoU using the SegVit network based on a Vision Transformer architecture. We show that this approach can be used to accurately monitor the state of trash screens during flood events, detecting build up of trash to guide preventative maintenance. This research is an important step towards the automation of trash screen monitoring, an application of great importance in environmental monitoring and better management of flooding.	
-								</p>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>15:55-16:15</b></td>
-						   <td>
-								<p><a id="paper4" href="javascript:void(0);" tabindex="0" role="button">Predicting Socio-economic Indicator Variations with Satellite Image Time Series and Transformer</a></p>
-								<i>Robin Jarry (Univ. Montpellier, France), Marc Chaumont (Univ. Montpellier, France & University of Nîmes, France), Laure Berti-Équille (Univ. Montpellier, France), Gérard Subsol (Univ. Montpellier, France)</i>
-								<p id="paper4_p" style="display: none">
-									<br/>
-									Monitoring local socio-economic variations is essential for tracking progress toward sustainable development goals. However, measuring these variations can be challenging, as it requires data collection at least twice, which is both expensive and time-consuming. To address this issue, researchers have proposed remote sensing and deep learning methods to predict socio-economic indicators. However, subtracting two predicted socio-economic indicators from different dates leads to inaccurate results. We propose a novel method for predicting socio-economic variations using satellite image time series to achieve more reliable predictions. Our method leverages both spatial and temporal information to enhance the final prediction. In our experiments, we observed that it outperforms state-of-the-art methods.
-								</p>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>16:20-16:50</b></td>
-						   <td>Coffee/Tea Break</td>
-						</tr>
-						<tr>
-						   <td><b>16:50-17:40</b></td>
-						   <td>
-								<table>
-								<tbody>
-									<tr style="background-color:inherit"> 
-										<td class="tdres" style="border-right: none">
-											<img src="assets/imgs/ClaudiaParis.png" alt="Dr Claudia Paris" class="img_inv"> 
-										</td>
-										<td style="padding-left:7px">
-											<p><b>Claudia Paris, University of Twente, the Netherlands</b></p>
-											<p><a id="char_talk2" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">Bridging the Gap: Combining Satellite Images and Street-level Pictures to generate Comprehensive Reference Data for Land-Cover Mapping</a></p>
-											<p id="char_talk_p2" style="display: none">
-												Satellite data have been extensively used for mapping the Earth's surface. Given the increasing frequency of extreme weather events and climate change, the production of continuously updated land-cover maps is extremely relevant for tracking ongoing environmental changes. However, as we advance in both the availability of satellite data and computational capabilities, there is an opportunity—and a need—to move beyond traditional land-cover mapping, enabling real-time environmental monitoring and providing more detailed semantic information that can capture landscape complexity. For example, in agricultural monitoring, assessing the impact of extreme weather conditions on crop productivity is not limited to the identification of crop types, but also requires the ability to map crop phenological stages, since crops are more vulnerable to frost damage during and after flowering.
-												<br/>
-												Achieving this requires a shift in field data collection: moving from conventional in-situ annotations to the use of street-level pictures. When combined with satellite data, street-level pictures offer the possibility to create dynamic, multi-view reference data, enriching the semantic context of information collected in the field to better understand environmental processes. However, the combination of satellite data and street-level pictures remains underexplored due to the challenges posed by their multimodal nature. Differences in resolution, scale, and georeferencing between ground and satellite images, make it challenging to align them for model training. Recent advances in Artificial Intelligence (AI), such as foundation models, visual-language models, and Agentic Reasoning AI, present new opportunities for combining these complementary data sources. 
-												<br/>
-												This talk will present the challenges and advantages of exploring the synergy between satellite images and street-level pictures to pave the way for enhanced environmental monitoring and more effective responses to climate challenges. It will also discuss operational strategies for integrating these data sources to create comprehensive reference datasets for land-cover mapping.
-											</p>
-											<p><a id="char_abs2" href="javascript:void(0);" tabindex="0" role="button" title="Bio">Bio</a></p>
-											<p id="char_abs_p2" style="display: none">
-												Claudia Paris is a Senior  Assistant Professor (UD1) in the Faculty of Geoinformation and Earth Observation Sciences (ITC) at the University of Twente, Enschede, the Netherlands. She received the “Laurea” (B.S.), the “Laurea Specialistica” (M.S.) (summa cum laude) degrees in Telecommunication Engineering and the Ph.D. in Information and Communication Technology from the University of Trento, Italy, in 2010, 2012, 2016, respectively. She accomplished the Honors Master Program in Research within the Master’s Degree in Telecommunication Engineering in 2012. Claudia Paris' research encompasses image processing, signal processing, pattern recognition, machine learning, and deep learning, specifically applied to remote sensing image analysis. She focuses on designing innovative and automated workflows for the analysis and classification of large-scale Earth Observation (EO) data for various applications (e.g., forest/agricultural mapping and monitoring) by leveraging high-performance computing (HPC) and cloud computing platforms (Google Earth Engine). Her main research interests focus on the classification and fusion of multisource remote sensing data, multitemporal image analysis, domain adaptation methods, and land cover map updates. She has been conducting research on these topics in the framework of national and international projects. She is a member of the scientific and programme committee of the IEEE International Geoscience and Remote Sensing Symposium (IGARSS) and the SPIE International Symposium on Remote Conferences, respectively, and is also a referee for several international journals. Dr. Paris was twice the recipient of the prestigious Symposium Prize Paper Award (exceptional paper in terms of content and impact on the Geoscience & Remote Sensing Society) at the 2016 IEEE IGARSS (Beijing, China, 2016) and at the 2017 IEEE IGARSS (Fort Worth, TX, USA, 2017). She also won the IEEE Geoscience and Remote Sensing Society 2022 Letters Prize Paper Award (exceptional paper in terms of content and impact on the GRS-Society).
-											</p>
-										</td>
-									</tr>
-								</tbody>
-								</table>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>17:40-17:50</b></td>
-						   <td>Challenge Results</td>
-						</tr>					
-						<tr>
-						   <td><b>17:50-18:00</b></td>
-						   <td>Closing</td>
-						</tr>
-					 </tbody>
-					</table>
-				</div>
+				<h4>Program</h4>
+				<p>
+					TBA
+				</p>
 			</div>
 		</div>
 	</div>
