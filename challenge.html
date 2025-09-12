@@ -54,7 +54,117 @@
 			<div class="container">
 				<h4>Data-Centric Land Cover Classification Challenge</h4>
 					<p>
-						TBA
+						Real-world semantic segmentation datasets often present multiple challenges, such as limited labeled data, severe class imbalance, and multi-modality. These issues can significantly hinder the performance of machine learning models, especially when combined. Therefore, it is crucial to develop methods that can robustly handle such data-related challenges, extracting all feasible information and improving the final results.
+					</p>
+				<h5>Challenge Summary</h5>		
+					<p>
+						The goal of this Data-centric Land Cover Classification Challenge, as part of the Workshop on Machine Vision for Earth Observation and Environment Monitoring and the British Machine Vision Conference (BMVC) 2025, is to design and develop AI-based models that achieve <b>the highest possible performance</b> on a small, highly imbalanced semantic segmentation dataset. For this, participants will be provided with training and test sets, each containing multispectral and synthetic aperture radar data. Additionally, segmentation masks with 14 classes (encoded with integer values from 0 to 13) <b>will be provided for the training set only</b>. 
+					</p>
+					<p>
+						Your task is to develop a method and generate prediction masks for the test set. These masks must follow the same 0–13 class encoding as the training labels and be submitted for evaluation. Success is measured by comparing these submitted prediction masks with hidden reference labels using the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html" target="_blank">Jaccard score</a>.
+					</p>
+					<p>
+						Please, check for more info on <a href="https://www.codabench.org/competitions/10453/" target="_blank">CodaBench</a>.
+					</p>
+					
+				<h5>Dataset</h5>
+					<p>
+						The training set is composed of approximately 20,000 images of size 128×128 pixels. Each sample includes:
+					</p>
+					<ul>
+					  <li>one <b>Sentinel-1</b> synthetic aperture radar (SAR) image,</li>
+					  <li>one <b>Sentinel-2</b> multispectral images (MSI) image, and</li>
+					  <li>one corresponding segmentation mask, with 14 classes encoded with integer values from 0 to 13.</li>
+					</ul> 
+
+					<p>
+						The test set contains around 3,000 <b>unlabeled</b> images of the same dimensions, with both SAR and MSI data available for all samples.
+					</p>
+					<p>
+						Participants have the flexibility to choose their input data and modeling approach. They may use only SAR data, only MSI data, or a combination of both in their proposed solutions.
+					</p>
+					<p>
+						You can download all data <a href="https://zenodo.org/records/17069182?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjBiM2VjMzE3LTU2ZDctNDIzMS05MTMzLTRiMmU1NTU3MGFhMSIsImRhdGEiOnt9LCJyYW5kb20iOiI1NjY4YjIyNzY0YjQyNWNkNTBjZjc2MzNlZWUwYjYwZSJ9.cYuQDVjWPNzV1OXpYWd3DNyARqgwL_KRi1-xznAFF9deRPYNIm73fbFvIMDl7ClxLbJ01Jtwh8UibMQnjQ1ZEw" target="_blank">here</a>. The dataset is organized into five folders:
+					</p>
+					<code>
+						train_val_sar_images/ -- SAR data, 2 bands<br>
+						train_val_msi_images/ -- MSI, 12 bands<br>
+						train_val_masks/<br>
+						test_sar_images/ -- SAR data, 2 bands<br>
+						test_msi_images/ -- MSI, 12 bands<br>
+					</code>
+
+					<ol>
+					  <li>train_val_sar_images contains Sentinel-1 synthetic aperture radar (SAR) images with 2 bands, for training and validation.</li>
+					  <li>train_val_msi_images contains Sentinel-2 multispectral images (MSI) with 12 bands, for training and validation.</li>
+					  <li>train_val_masks contains the corresponding ground-truth segmentation masks for the training data and validation.</li>
+					  <li>test_sar_images contains Sentinel-1 SAR images (2 bands) for testing.</li>
+					  <li>test_msi_images contains Sentinel-2 multispectral images (12 bands) for testing.</li>
+					</ol>  
+
+					<p>
+						Please, check for more info on <a href="https://www.codabench.org/competitions/10453/" target="_blank">CodaBench</a>.
+					</p>
+
+				<h5>Submission and Evaluation</h5>			
+					<p>
+						Prediction masks for the test set must follow the same encoding as the training data, with class values from <b>0 to 13</b>. All prediction masks should be compressed into a <b>single .zip</b> file and submitted for evaluation.
+					</p>
+					<p>
+						Please follow these requirements:
+					</p>
+					<ul>
+					  <li>File naming: Each prediction mask must have exactly the same filename as its corresponding test image.</li>
+					  <li>Format: Accepted file formats are .png, .tiff, or .tif.</li>
+					  <li>Folder structure: The zip file should contain only the image files (no folders or subfolders).</li>
+					</ul> 
+
+					<p>
+						Performance will be measured using the macro-averaged <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html" target="_blank">Jaccard score</a>, accounting for class imbalance.
+					</p>
+
+					<p>
+						Please submit your solutions on <a href="https://www.codabench.org/competitions/10453/" target="_blank">CodaBench</a>.
+					</p>
+				
+				<h5>Timeline</h5>
+					<p>
+						Participants may submit 5 submissions every day and 100 in total. The best submitted solution will be automatically listed on the leaderboard.
+					</p>
+
+					<div>
+						<table class="table table-striped">
+						 <thead>
+							<tr>
+							   <th scope="col">Subject</th>
+							   <th scope="col">Date</th>
+							</tr>
+						 </thead>
+						 <tbody>
+							<tr>
+							   <td>Submission Deadline</td>
+							   <td>Tuesday, 11 November 2025</td>
+							</tr>
+							<tr>
+							   <td>Workshop</td>
+							   <td>Thursday, 27 November 2025</td>
+							</tr>
+						 </tbody>
+						</table>
+					</div>
+				
+				<h5>Results, Presentation, Awards, and Prizes</h5>
+					<p>
+						The final results of this challenge will be presented during the Workshop.
+						The authors of the top-ranked methods will be invited to present their approaches at the Workshop in Sheffield/UK, on 27 November 2025.
+						These authors will also be invited to co-author a journal paper which will summarize the outcome of this challenge and will be submitted with open access to IEEE JSTARS.
+					</p>
+				
+				<h5>Organizers</h5>
+					<p>
+						Keiller Nogueira, University of Liverpool, UK<br>
+						Ronny Hänsch, German Aerospace Center (DLR), Germany<br>
+						Ribana Roscher, Research Center Jülich and University of Bonn, Germany<br>
 					</p>
 			</div>
 		</div>
