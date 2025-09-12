@@ -71,11 +71,13 @@
 					<p>
 						The training set is composed of approximately 20,000 images of size 128×128 pixels. Each sample includes:
 					</p>
-					<ul>
-					  <li>one <b>Sentinel-1</b> synthetic aperture radar (SAR) image,</li>
-					  <li>one <b>Sentinel-2</b> multispectral images (MSI) image, and</li>
-					  <li>one corresponding segmentation mask, with 14 classes encoded with integer values from 0 to 13.</li>
-					</ul> 
+					<p>
+						<ul>
+						  <li>one <b>Sentinel-1</b> synthetic aperture radar (SAR) image,</li>
+						  <li>one <b>Sentinel-2</b> multispectral images (MSI) image, and</li>
+						  <li>one corresponding segmentation mask, with 14 classes encoded with integer values from 0 to 13.</li>
+						</ul> 
+					</p>
 
 					<p>
 						The test set contains around 3,000 <b>unlabeled</b> images of the same dimensions, with both SAR and MSI data available for all samples.
@@ -94,13 +96,15 @@
 						test_msi_images/ -- MSI, 12 bands<br>
 					</code>
 
-					<ol>
-					  <li>train_val_sar_images contains Sentinel-1 synthetic aperture radar (SAR) images with 2 bands, for training and validation.</li>
-					  <li>train_val_msi_images contains Sentinel-2 multispectral images (MSI) with 12 bands, for training and validation.</li>
-					  <li>train_val_masks contains the corresponding ground-truth segmentation masks for the training data and validation.</li>
-					  <li>test_sar_images contains Sentinel-1 SAR images (2 bands) for testing.</li>
-					  <li>test_msi_images contains Sentinel-2 multispectral images (12 bands) for testing.</li>
-					</ol>  
+					<p>
+						<ol>
+						  <li>train_val_sar_images contains Sentinel-1 synthetic aperture radar (SAR) images with 2 bands, for training and validation.</li>
+						  <li>train_val_msi_images contains Sentinel-2 multispectral images (MSI) with 12 bands, for training and validation.</li>
+						  <li>train_val_masks contains the corresponding ground-truth segmentation masks for the training data and validation.</li>
+						  <li>test_sar_images contains Sentinel-1 SAR images (2 bands) for testing.</li>
+						  <li>test_msi_images contains Sentinel-2 multispectral images (12 bands) for testing.</li>
+						</ol>
+					</p>
 
 					<p>
 						Please, check for more info on <a href="https://www.codabench.org/competitions/10453/" target="_blank">CodaBench</a>.
@@ -113,11 +117,13 @@
 					<p>
 						Please follow these requirements:
 					</p>
-					<ul>
-					  <li>File naming: Each prediction mask must have exactly the same filename as its corresponding test image.</li>
-					  <li>Format: Accepted file formats are .png, .tiff, or .tif.</li>
-					  <li>Folder structure: The zip file should contain only the image files (no folders or subfolders).</li>
-					</ul> 
+					<p>
+						<ul>
+						  <li>File naming: Each prediction mask must have exactly the same filename as its corresponding test image.</li>
+						  <li>Format: Accepted file formats are .png, .tiff, or .tif.</li>
+						  <li>Folder structure: The zip file should contain only the image files (no folders or subfolders).</li>
+						</ul> 
+					</p>
 
 					<p>
 						Performance will be measured using the macro-averaged <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html" target="_blank">Jaccard score</a>, accounting for class imbalance.
