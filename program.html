@@ -52,31 +52,146 @@
 		
 		<div class="cell2">
 			<div class="container">
-				<h4>Program</h4>
-				<p>
-					The full program will be announced closer to the event.
-				</p>
-				<h5>Invited Speakers</h5>
-				<table>
-					<tbody>
-						<tr class="spaceUnder"> 
-							<td class="tdres">
-								<img src="assets/imgs/PhotoPapoutsis2.PNG" alt="Dr Ioannis Papoutsis" class="img_inv"> 
+				<h4>Tentative Program</h4>
+				<div>
+					<table class="table table-striped">
+					 <tbody>
+						<tr>
+						   <td><b>14:00-14:05</b></td>
+						   <td>Welcome</td>
+						</tr>
+						<tr>
+						   <td><b>14:05-14:50</b></td>
+						   <td>
+								<table>
+								<tbody>
+									<tr style="background-color:inherit"> 
+										<td class="tdres" style="border-right: none">
+											<img src="assets/imgs/PhotoPapoutsis2.PNG" alt="Dr Ioannis Papoutsis" class="img_inv"> 
+										</td>
+										<td style="padding-left:7px">
+											<p><b>Ioannis Papoutsis, National Technical University of Athens, Greece</b></p>
+											<p><a id="char_talk1" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">Title to be announced</a></p>
+											<p id="char_talk_p1" style="display: none">
+												TBA
+											</p>
+											<p><a id="char_abs1" href="javascript:void(0);" tabindex="0" role="button" title="Bio">Bio</a></p>
+											<p id="char_abs_p1" style="display: none">
+												Ioannis Papoutsis is an Assistant Professor of Remote Sensing and Artificial Intelligence at the National Technical University of Athens (NTUA), and an Adjunct Researcher at both the National Observatory of Athens and the Archimedes/Athena Research Center. He holds a diploma in Electrical and Computer Engineering and a PhD in Satellite Remote Sensing from NTUA, an MSc in Telecommunications from University College London, and an MBA from Alba Business School. He leads the <a href="https://orionlab.space.noa.gr/" target="_blank">OrionLab</a> research group, which focuses on big satellite data analytics and machine learning for Earth Observation, with emphasis on natural disaster management and climate change impact monitoring. His research interests include foundational models in remote sensing, particularly self-supervised learning for multi-modal EO data, vision-language models for remote sensing image interpretation, and earth system deep learning for spatiotemporal forecasting. He coordinates four research projects — <a href="https://www.euspa.europa.eu/thinkingearth-copernicus-foundation-models-thinking-earth" target="_blank">ThinkingEarth</a>, <a href="https://meditwin-project.eu/" target="_blank">MeDiTwin</a>, <a href="https://deepcube-h2020.eu/" target="_blank">DeepCube</a>, and <a href="https://seasfire.hua.gr/" target="_blank">SeasFire</a> — which investigate the application of AI in addressing environmental challenges. He has also served as Operations Manager of the Greek node of the European Space Agency (ESA) Hubs for Sentinel data distribution, and as Copernicus Emergency Management Services Manager for Risk and Recovery.
+											</p>
+										</td>
+									</tr>
+								</tbody>
+								</table>
 							</td>
-							<td style="padding-left:7px">
-								<p><b>Ioannis Papoutsis, National Technical University of Athens, Greece</b></p>
-								<p><a id="char_talk1" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">Title to be announced</a></p>
-								<p id="char_talk_p1" style="display: none">
-									TBA
-								</p>
-								<p><a id="char_abs1" href="javascript:void(0);" tabindex="0" role="button" title="Bio">Bio</a></p>
-								<p id="char_abs_p1" style="display: none">
-									Ioannis Papoutsis is an Assistant Professor of Remote Sensing and Artificial Intelligence at the National Technical University of Athens (NTUA), and an Adjunct Researcher at both the National Observatory of Athens and the Archimedes/Athena Research Center. He holds a diploma in Electrical and Computer Engineering and a PhD in Satellite Remote Sensing from NTUA, an MSc in Telecommunications from University College London, and an MBA from Alba Business School. He leads the <a href="https://orionlab.space.noa.gr/" target="_blank">OrionLab</a> research group, which focuses on big satellite data analytics and machine learning for Earth Observation, with emphasis on natural disaster management and climate change impact monitoring. His research interests include foundational models in remote sensing, particularly self-supervised learning for multi-modal EO data, vision-language models for remote sensing image interpretation, and earth system deep learning for spatiotemporal forecasting. He coordinates four research projects — <a href="https://www.euspa.europa.eu/thinkingearth-copernicus-foundation-models-thinking-earth" target="_blank">ThinkingEarth</a>, <a href="https://meditwin-project.eu/" target="_blank">MeDiTwin</a>, <a href="https://deepcube-h2020.eu/" target="_blank">DeepCube</a>, and <a href="https://seasfire.hua.gr/" target="_blank">SeasFire</a> — which investigate the application of AI in addressing environmental challenges. He has also served as Operations Manager of the Greek node of the European Space Agency (ESA) Hubs for Sentinel data distribution, and as Copernicus Emergency Management Services Manager for Risk and Recovery.
+						</tr>
+						<tr>
+						   <td><b>14:50-15:05</b></td>
+						   <td>
+								<p><a id="paper1" href="javascript:void(0);" tabindex="0" role="button">Spatio-Temporal Forecasting of PS–InSAR Displacement with a PointNet-Inspired Deep Learning Model</a></p>
+								<i>Takayuki Shinohara (National Institute of Advanced Industrial Science and Technology, Japan), Takayuki Shinohara (National Institute of Advanced Industrial Science and Technology, Japan)</i>
+								<p id="paper1_p" style="display: none">
+									<br/>
+									Persistent Scatterer InSAR (PS–InSAR) yields a genuine three–dimensional point cloud: each scatterer is identified by fixed coordinates (x, y, z) and an accompanying displacement sequence D_u1,..., D_uT. Most existing forecasting studies treat every series in isolation and, as a result, discard the spatial context that governs tectonic, volcanic, and anthropogenic deformation. We present PointNet–PSI, a spatio–temporal model that couples a PointNet–style point cloud encoder with MOMENT, a recent foundation model for general time–series prediction. The permutation–invariant PointNet front–end ingests the unordered PS–InSAR cloud, compresses local geometry and kinematic similarity into latent descriptors, then concatenates these descriptors with the raw displacement history. The enriched embeddings are passed to MOMENT’s transformer backbone, which produces multi–step forecasts for every scatterer. In this hybrid design the network learns where through spatial aggregation of neighbouring points and when through MOMENT’s long–range temporal attention, while retaining the large receptive field and data–efficient pre–training advantages of the base model. We validate the approach on the European Ground Motion Service Basic 2019–2023 vertical–velocity product. We adopt a hindcast protocol: observations from 20192020 serve as context, and all 60 samples of 2021 form the strictly held-out forecast horizon. Compared with strong per–point sequence models (LSTM, Temporal Fusion Transformer, and vanilla MOMENT) and naive PointNet, PointNet–PSI reduces the test RMSE by about 17%.
 								</p>
 							</td>
 						</tr>
-					</tbody>
-				</table>
+						<tr>
+						   <td><b>15:05-15:20</b></td>
+						   <td>
+								<p><a id="paper2" href="javascript:void(0);" tabindex="0" role="button">From Forest to Urban: Data Efficient Tree Segmentation with Self-Supervised Pretraining on Height-Based Voronoi Maps</a></p>
+								<i>Jonas Geiselhart (University of Stuttgart, Germany), Luca Reichmann (University of Stuttgart, Germany), Alina Roitberg (University of Hildesheim, Germany)</i>
+								<p id="paper2_p" style="display: none">
+									<br/>
+									We propose a self-supervised pretraining framework for tree segmentation in airborne VHR imagery that exploits both color and infrared (RGBI) data and height maps. Our key idea is pairing height maps and Voronoi decomposition to create auto-labels, enabling pretraining without human annotations. The model is fine-tuned on a small, manually annotated urban dataset, with postprocessing refining results across diverse settings. To validate our idea, we introduce a composite dataset consisting of three parts: (1) An autolabeled forest dataset used for height-driven pretraining, (2) an annotated urban tree dataset used for fine-tuning and (3) a small test dataset with manual trees for validation. Our approach achieves F1-scores of 0.65 (urban) and 0.60 (suburban). This also demonstrates that the proposed height-driven pretraining outperforms the conventional training by 0.44 in urban environments. In summary, we contribute a fully automatic framework to detect trees in large and diverse regions of land using models that were trained by a simple self-supervised mechanism utilizing height data of forest regions. Additionally, we analyze the transfer capabilities with a small finetuning dataset. Code, models, and data are available on <a href="https://github.com/Jonetz/TreeDetection" target="_blank">GitHub</a>.
+								</p>
+							</td>
+						</tr>
+						<tr>
+						   <td><b>15:20-15:35</b></td>
+						   <td>
+								<p><a id="paper3" href="javascript:void(0);" tabindex="0" role="button">Distribution Modeling and GenAI-Assisted Projection for SAR Incremental Learning</a></p>
+								<i>Heqing Huang (Beihang University, China & University of Stirling, UK), Fei Gao (Beihang University, China), Vahid Akbari (University of Stirling, UK)</i>
+								<p id="paper3_p" style="display: none">
+									<br/>
+									In class incremental learning for synthetic aperture radar (SAR) imagery, models must acquire new categories while retaining knowledge of previous ones. Generative replay can mitigate forgetting by synthesizing old class samples. However, vanilla generative networks, such as variational autoencoder (VAE), prioritize pixel level reconstruction and do not inherently enforce class separability, which may not be optimal for incremental recognition. To address this issue, we analyze the distribution of the dataset used. The class-wise latent distributions are modeled via flow-based density estimation, enabling the generation of representative, in-distribution exemplars. Then we combine with current-task data, the exemplars support a feature projection between old and new latent spaces, from which a numerically optimized closed-form classifier is reconstructed. This dual use of learned distributions both constrains generative replay to in-distribution regions and calibrates decision boundaries to reduce drift. Experiments on SAR benchmarks demonstrate that our approach achieves state-of-the-art accuracy while maintaining a superior stability and plasticity trade-off.
+								</p>
+							</td>
+						</tr>
+						<tr>
+						   <td><b>15:35-15:50</b></td>
+						   <td>
+								<p><a id="paper4" href="javascript:void(0);" tabindex="0" role="button">Open-Vocabulary Semantic Segmentation in Remote Sensing via Hierarchical Attention Masking and Model Composition</a></p>
+								<i>Mohammadreza Heidarianbaei (Leibniz University Hannover, Germany), Mareike Dorozynski (Leibniz University Hannover, Germany), Hubert Kanyamahanga (Leibniz University Hannover, Germany), Max Mehltretter (Leibniz University Hannover, Germany), Franz Rottensteiner (Leibniz University Hannover, Germany)</i>
+								<p id="paper4_p" style="display: none">
+									<br/>
+									In this paper, we propose ReSeg-CLIP, a new training-free Open-Vocabulary Semantic Segmentation method for remote sensing data. To compensate the problems of vision language models such as CLIP in semantic segmentation caused by inappropriate interactions within the self-attention layers, we introduce a hierarchical scheme utilizing masks generated by SAM to constrain the interactions at multiple scales. We also present a model composition approach that averages the parameters of multiple RS-specific CLIP variants, taking advantage of a new weighting scheme that evaluates representational quality using varying text prompts. Our method achieves state-of-the-art results across three RS benchmarks without additional training.
+									https://github.com/aemrhb/ReSeg-CLIP.
+								</p>
+							</td>
+						</tr>
+						<tr>
+						   <td><b>15:50-16:15</b></td>
+						   <td>Coffee/Tea Break</td>
+						</tr>
+						<tr>
+						   <td><b>16:15-17:00</b></td>
+						   <td>
+								<table>
+								<tbody>
+									<tr style="background-color:inherit"> 
+										<td class="tdres" style="border-right: none">
+											<img src="assets/imgs/javiera.jpg" alt="Dr Javiera Castillo Navarro" class="img_inv"> 
+										</td>
+										<td style="padding-left:7px">
+											<p><b>Javiera Castillo Navarro, Conservatoire National des Arts et Métier, France</b></p>
+											<p><a id="char_talk2" href="javascript:void(0);" tabindex="0" role="button" title="Abstract">TBA</a></p>
+											<p id="char_talk_p2" style="display: none">
+												TBA
+											</p>
+											<p><a id="char_abs2" href="javascript:void(0);" tabindex="0" role="button" title="Bio">Bio</a></p>
+											<p id="char_abs_p2" style="display: none">
+												TBA
+											</p>
+										</td>
+									</tr>
+								</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+						   <td><b>17:00-17:15</b></td>
+						   <td>
+								<p><a id="paper5" href="javascript:void(0);" tabindex="0" role="button">Enhancing Marine Pollution Detection in Remote Sensing via Self-Supervised Boundary Awareness</a></p>
+								<i>Shuaiyu Chen (University of Exeter, UK), Chunbo Luo (University of Exeter, UK), Peng Ren (China University of Petroleum), Zeyu Fu (University of Exeter, UK)</i>
+								<p id="paper5_p" style="display: none">
+									<br/>
+									Accurate Marine Pollution Detection is challenging due to the vague, irregular, and low-contrast nature of pollutant boundaries. Existing boundary-aware remote sensing segmentation methods often rely on explicit boundary annotations or hand-crafted attention modules, limiting their effectiveness in marine environments where annotations are scarce and structures are complex. In this work, we introduce a fully Self-Supervised Boundary-Awareness (SSBA) block that can be seamlessly integrated into existing segmentation architectures for MPD. Our SSBA block integrates a VSS-based global extractor, a boundary-focused local extractor with deformable and frequency features, and an attention-guided fusion module to adaptively combine semantics and edges for boundaryaware prediction. To further enhance spatial sensitivity, we develop a boundary-aware attention module trained via boundary reconstruction, enabling dynamic focus on critical boundary regions. Experimental results on two marine pollution datasets show that our method consistently provides state-of-the-art performance, particularly under weak boundary conditions.
+								</p>
+							</td>
+						</tr>
+						<tr>
+						   <td><b>17:15-17:30</b></td>
+						   <td>
+								<p><a id="paper6" href="javascript:void(0);" tabindex="0" role="button">SpecBPP: A Self-Supervised Learning Approach for Hyperspectral Representation and Soil Organic Carbon Estimation</a></p>
+								<i>Daniel La’ah Ayuba (University Of Surrey, UK), Jean-Yves Guillemaut (University Of Surrey, UK), Belen Marti-Cardona (University Of Surrey, UK), Oscar Mendez Maldonado (University Of Surrey, UK)</i>
+								<p id="paper6_p" style="display: none">
+									<br/>
+									Self-supervised learning has revolutionized representation learning in vision and language, but remains underexplored for hyperspectral imagery (HSI), where the sequential structure of spectral bands offers unique opportunities. In this work, we propose Spectral Band Permutation Prediction (SpecBPP), a novel self-supervised learning framework that leverages the inherent spectral continuity in HSI. Instead of reconstructing masked bands, SpecBPP challenges a model to recover the correct order of shuffled spectral segments, encouraging global spectral understanding. We implement a curriculum-based training strategy that progressively increases permutation difficulty to manage the factorial complexity of the permutation space. Applied to Soil Organic Carbon (SOC) estimation using EnMAP satellite data, our method achieves state-of-the-art results, outperforming both masked autoencoder (MAE) and joint-embedding predictive (JEPA) baselines. Fine-tuned on limited labeled samples, our model yields an R2 of 0.9456, RMSE of 1.1053%, and RPD of 4.19, significantly surpassing traditional and self-supervised benchmarks. Our results demonstrate that spectral order prediction is a powerful pretext task for hyperspectral understanding, opening new avenues for scientific representation learning in remote sensing and beyond.
+								</p>
+							</td>
+						</tr>
+						<tr>
+						   <td><b>17:30-17:55</b></td>
+						   <td><a href="https://www.codabench.org/competitions/10453/" target="_blank">Challenge Results</a></td>
+						</tr>					
+						<tr>
+						   <td><b>17:55-18:00</b></td>
+						   <td>Closing</td>
+						</tr>
+					 </tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>

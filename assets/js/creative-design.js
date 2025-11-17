@@ -102,5 +102,23 @@ $(document).ready(function(){
 		}
 	});
 	
+	$('#paper5').click(function(){
+		var $p = $('#paper5_p');
+		if ($p.css('display') == 'none'){
+			$p.css('display', 'block');
+		} else {
+			$p.css('display', 'none');
+		}
+	});
+	
+	$('#paper6').click(function(){
+		var $p = $('#paper6_p');
+		if ($p.css('display') == 'none'){
+			$p.css('display', 'block');
+		} else {
+			$p.css('display', 'none');
+		}
+	});
+	
 }); 
 
