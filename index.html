@@ -21,6 +21,40 @@
 		        flex-wrap: wrap;
 		        margin-top: 150px;
 		}
+
+		/* Header adjustments: keep the banner's exact aspect ratio at every browser width. */
+		header#home.header {
+			width: 100%;
+			height: auto !important;
+			min-height: 0 !important;
+			aspect-ratio: 2048 / 320;
+			background-size: 100% 100% !important;
+			background-position: top center !important;
+			background-repeat: no-repeat !important;
+			background-color: #ffffff;
+			margin: 0 !important;
+			padding: 0 !important;
+		}
+
+		.maintable {
+			margin-top: 0 !important;
+			padding-top: 0 !important;
+		}
+
+		body, html {
+			margin: 0;
+			padding: 0;
+		}
+
+		header#home.header + .maintable {
+			margin-top: 0 !important;
+			padding-top: 0 !important;
+		}
+
+		header#home.header .header-content,
+		header#home.header .overlay {
+			display: none !important;
+		}
 	</style>
 </head>
 <body>
