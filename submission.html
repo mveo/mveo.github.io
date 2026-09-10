@@ -14,6 +14,242 @@
     <!-- Bootstrap + Creative Design main styles -->
 	<link rel="stylesheet" href="assets/css/creative-design.css">
 
+
+    <style>
+        /* Submission panel only — page header/banner and navigation remain unchanged */
+        .submission-wrap {
+            padding: 14px 0 34px;
+        }
+
+        .submission-panel {
+            position: relative;
+            overflow: hidden;
+            border-radius: 22px;
+            padding: 34px 34px 28px;
+            color: #ffffff;
+            background: linear-gradient(135deg, #158b84 0%, #11a5a0 100%);
+            box-shadow: 0 16px 34px rgba(18, 96, 91, 0.18);
+        }
+
+        .submission-panel::after {
+            content: "";
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            right: -110px;
+            top: -120px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.07);
+            pointer-events: none;
+        }
+
+        .submission-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .submission-badge {
+            display: inline-flex;
+            align-items: center;
+            min-height: 38px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.16);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.1px;
+            white-space: nowrap;
+        }
+
+        .submission-badge.deadline {
+            background: #ffae18;
+            color: #14272a;
+        }
+
+        .submission-title {
+            position: relative;
+            z-index: 1;
+            margin: 0 0 14px;
+            color: #ffffff;
+            font-size: clamp(30px, 4vw, 46px);
+            line-height: 1.12;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+        }
+
+        .submission-lead {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            max-width: 900px;
+            color: rgba(255,255,255,0.96);
+            font-size: 19px;
+            line-height: 1.48;
+        }
+
+        .submission-facts {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin: 26px 0 28px;
+        }
+
+        .submission-fact {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            min-width: 0;
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .submission-fact i {
+            flex: 0 0 auto;
+            width: 22px;
+            text-align: center;
+            color: #ffd36f;
+            font-size: 18px;
+        }
+
+        .submission-actions {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 26px;
+        }
+
+        .submission-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            min-height: 56px;
+            padding: 13px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none !important;
+            transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+        }
+
+        .submission-btn:hover {
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        .submission-btn.primary {
+            background: #ffffff;
+            color: #0d746f;
+            box-shadow: 0 9px 18px rgba(0,0,0,0.10);
+        }
+
+        .submission-btn.primary:hover {
+            color: #075e5a;
+            box-shadow: 0 12px 22px rgba(0,0,0,0.14);
+        }
+
+        .submission-btn.secondary {
+            color: #ffffff;
+            border: 2px solid rgba(255,255,255,0.72);
+            background: rgba(255,255,255,0.04);
+        }
+
+        .submission-btn.secondary:hover {
+            color: #ffffff;
+            background: rgba(255,255,255,0.10);
+        }
+
+        .submission-details {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0,1fr));
+            gap: 12px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(255,255,255,0.26);
+        }
+
+        .submission-detail {
+            padding: 13px 14px;
+            border-radius: 12px;
+            background: rgba(0, 66, 63, 0.16);
+        }
+
+        .submission-detail span {
+            display: block;
+            margin-bottom: 4px;
+            color: rgba(255,255,255,0.72);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .65px;
+        }
+
+        .submission-detail strong {
+            display: block;
+            color: #ffffff;
+            font-size: 15px;
+            line-height: 1.35;
+        }
+
+        .submission-note {
+            position: relative;
+            z-index: 1;
+            margin: 20px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .submission-note a {
+            color: #ffffff;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+
+        .cmt-note {
+            position: relative;
+            z-index: 1;
+            margin: 16px 0 0;
+            color: rgba(255,255,255,0.65);
+            font-size: 11px;
+            line-height: 1.45;
+        }
+
+        @media (max-width: 900px) {
+            .submission-facts,
+            .submission-details {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .submission-panel {
+                padding: 26px 20px 22px;
+                border-radius: 16px;
+            }
+            .submission-title {
+                font-size: 31px;
+            }
+            .submission-lead {
+                font-size: 17px;
+            }
+            .submission-btn {
+                width: 100%;
+            }
+        }
+    </style>
+
 </head>
 <body>
 
@@ -51,24 +287,57 @@
 		</div>
 		
 		<div class="cell2">
-			<div class="container">
-				<h4>Author Guidelines and Submissions</h4>
-				<p>
-					The MVEO Workshop will be held <b>in person</b> from <b>23–26 November 2026</b> in Lancaster, UK. If you are unable to attend, you may nominate one of your co-authors (or another representative) to present the paper on your behalf. However, if neither you nor a representative is able to present the work, the paper will be withdrawn and will not be included in the workshop proceedings.
-				</p>
-				<p>
-				1. Prepare the anonymous, 14-page (references excluded) submission using the <a href="https://bmvc2026.bmva.org/authors/submit-your-paper/" target="_blank">BMVC template and following the paper guidelines</a>. 
-				</p>
-				<p>
-				2. Submit at <a href="https://cmt3.research.microsoft.com/MVEO2026/" target="_blank">CMT</a>.<br/>
-				<small>The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</small>
-				</p>
-				<p>
-				The paper submission deadline is Monday, 21 September 2026, author notification Friday, 16 October 2026, camera ready Friday, 23 October 2026. All deadlines are 23:59, GMT.
-				</p>
-				<p>
-				<b>All accepted papers will be part of the official BMVC Workshop proceedings</b>. Please, check <a href="https://bmvc2025.bmva.org/proceedings/workshop-proceedings/" target="_blank">here</a> for last year's workshop proceedings.
-				</p>
+			<div class="container submission-wrap">
+                <section class="submission-panel" aria-labelledby="submission-title">
+                    <div class="submission-badges">
+                        <span class="submission-badge">BMVC 2026 Workshop</span>
+                        <span class="submission-badge">Call for Papers</span>
+                        <span class="submission-badge deadline">Deadline: 21 Sep 2026</span>
+                    </div>
+
+                    <h1 id="submission-title" class="submission-title">Submit your paper to MVEO 2026</h1>
+                    <p class="submission-lead">
+                        Machine Vision for Earth Observation, Environmental Monitoring &amp; Climate Change — held in conjunction with BMVC 2026 in Lancaster, UK.
+                    </p>
+
+                    <div class="submission-facts">
+                        <div class="submission-fact"><i class="far fa-calendar-alt" aria-hidden="true"></i><span>21 September 2026 · 23:59 GMT</span></div>
+                        <div class="submission-fact"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Lancaster, United Kingdom</span></div>
+                        <div class="submission-fact"><i class="fas fa-book-open" aria-hidden="true"></i><span>BMVC Workshop Proceedings</span></div>
+                    </div>
+
+                    <div class="submission-actions">
+                        <a class="submission-btn primary" href="https://cmt3.research.microsoft.com/MVEO2026/" target="_blank" rel="noopener">
+                            Submit Paper <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="submission-btn secondary" href="https://bmvc2026.bmva.org/authors/submit-your-paper/" target="_blank" rel="noopener">
+                            Author Guidelines
+                        </a>
+                    </div>
+
+                    <div class="submission-details">
+                        <div class="submission-detail">
+                            <span>Paper format</span>
+                            <strong>Anonymous · 14 pages, references excluded</strong>
+                        </div>
+                        <div class="submission-detail">
+                            <span>Author notification</span>
+                            <strong>16 October 2026</strong>
+                        </div>
+                        <div class="submission-detail">
+                            <span>Camera ready</span>
+                            <strong>23 October 2026</strong>
+                        </div>
+                    </div>
+
+                    <p class="submission-note">
+                        The workshop will be held <strong>in person, 23–26 November 2026</strong>. If an author cannot attend, a co-author or another representative may present the paper. Papers without a presenter will be withdrawn and will not appear in the workshop proceedings. <strong>All accepted papers will be included in the official BMVC Workshop proceedings.</strong> See <a href="https://bmvc2025.bmva.org/proceedings/workshop-proceedings/" target="_blank" rel="noopener">last year's workshop proceedings</a>.
+                    </p>
+
+                    <p class="cmt-note">
+                        The Microsoft CMT service is used to manage the peer-review process. The service is provided free by Microsoft, including the associated Azure cloud, software development and support costs.
+                    </p>
+                </section>
 			</div>
 		</div>
 	</div>
