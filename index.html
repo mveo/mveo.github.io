@@ -55,6 +55,228 @@
 		header#home.header .overlay {
 			display: none !important;
 		}
+
+
+		/* Main content presentation */
+		.mveo-main {
+			--navy: #071a2b;
+			--blue: #0b85c8;
+			--cyan: #21b7d8;
+			--green: #78c83b;
+			--ink: #213544;
+			--muted: #60717c;
+			--line: #dce8ee;
+			--soft: #f5f9fb;
+			padding-top: 30px;
+			padding-bottom: 48px;
+		}
+
+		.workshop-heading {
+			position: relative;
+			padding: 27px 30px 28px;
+			margin-bottom: 22px;
+			border: 1px solid var(--line);
+			border-radius: 18px;
+			background: linear-gradient(135deg, #ffffff 0%, #f3f9fc 100%);
+			box-shadow: 0 10px 30px rgba(7, 34, 54, .07);
+			overflow: hidden;
+		}
+
+		.workshop-heading::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 6px;
+			background: linear-gradient(180deg, var(--green), var(--cyan), var(--blue));
+		}
+
+		.workshop-heading .eyebrow {
+			display: inline-block;
+			margin-bottom: 9px;
+			font-size: .78rem;
+			font-weight: 800;
+			letter-spacing: .12em;
+			text-transform: uppercase;
+			color: #087e9f;
+		}
+
+		.workshop-heading h2 {
+			margin: 0;
+			max-width: 980px;
+			font-size: clamp(1.65rem, 2.8vw, 2.45rem);
+			line-height: 1.2;
+			font-weight: 800;
+			color: var(--navy);
+			letter-spacing: -.02em;
+		}
+
+		.aims-card {
+			padding: 28px 30px 25px;
+			border: 1px solid var(--line);
+			border-radius: 18px;
+			background: #ffffff;
+			box-shadow: 0 8px 24px rgba(7, 34, 54, .055);
+		}
+
+		.aims-card h4,
+		.topics-heading h4 {
+			margin: 0 0 16px;
+			font-size: 1.6rem;
+			font-weight: 800;
+			color: var(--navy);
+		}
+
+		.aims-card p {
+			margin-bottom: 15px;
+			font-size: 1rem;
+			line-height: 1.78;
+			color: #485d69;
+		}
+
+		.aims-card p:last-child {
+			margin-bottom: 0;
+		}
+
+		.scope-highlight {
+			margin: 22px 0 0;
+			padding: 16px 18px;
+			border-left: 4px solid var(--green);
+			border-radius: 0 12px 12px 0;
+			background: #f5fbf1;
+			color: #365040;
+			font-weight: 600;
+			line-height: 1.65;
+		}
+
+		.topics-heading {
+			margin: 32px 0 16px;
+		}
+
+		.topics-heading h4 {
+			margin-bottom: 5px;
+		}
+
+		.topics-heading p {
+			margin: 0;
+			color: var(--muted);
+		}
+
+		.scope-grid {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 16px;
+		}
+
+		.scope-card {
+			padding: 22px;
+			border: 1px solid var(--line);
+			border-radius: 16px;
+			background: #ffffff;
+			box-shadow: 0 7px 20px rgba(7, 34, 54, .05);
+		}
+
+		.scope-card-head {
+			display: flex;
+			align-items: center;
+			gap: 11px;
+			margin-bottom: 13px;
+		}
+
+		.scope-card-head .icon {
+			width: 42px;
+			height: 42px;
+			flex: 0 0 42px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 12px;
+			background: #eef8fb;
+			color: #087e9f;
+			font-size: 1.05rem;
+		}
+
+		.scope-card:nth-child(2) .icon {
+			background: #f3faee;
+			color: #5a9c2c;
+		}
+
+		.scope-card:nth-child(3) .icon {
+			background: #eef5fb;
+			color: #2479b7;
+		}
+
+		.scope-card h5 {
+			margin: 0;
+			font-size: 1.08rem;
+			font-weight: 800;
+			color: var(--navy);
+		}
+
+		.scope-card p {
+			margin: 0;
+			font-size: .92rem;
+			line-height: 1.65;
+			color: #566973;
+		}
+
+		.submit-area {
+			text-align: center;
+			padding: 34px 15px 8px;
+		}
+
+		.submit-now-btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			padding: 14px 30px;
+			border-radius: 10px;
+			background: linear-gradient(135deg, #0a8eb0 0%, #0b73b5 100%);
+			color: #ffffff !important;
+			font-size: 1.05rem;
+			font-weight: 800;
+			letter-spacing: .02em;
+			text-decoration: none !important;
+			box-shadow: 0 10px 22px rgba(9, 113, 164, .22);
+			transition: transform .18s ease, box-shadow .18s ease;
+		}
+
+		.submit-now-btn:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 13px 28px rgba(9, 113, 164, .3);
+			color: #ffffff !important;
+		}
+
+		.submit-area small {
+			display: block;
+			margin-top: 10px;
+			color: var(--muted);
+		}
+
+		@media (max-width: 991px) {
+			.scope-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		@media (max-width: 575px) {
+			.mveo-main {
+				padding-top: 20px;
+			}
+			.workshop-heading,
+			.aims-card {
+				padding: 22px 20px;
+				border-radius: 14px;
+			}
+			.scope-card {
+				padding: 18px;
+			}
+			.submit-now-btn {
+				width: 100%;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -93,35 +315,66 @@
 		</div>
 		
 		<div class="cell2">
-			<div class="container">
-				<h4>Aims and Scope</h4>
-				<p>
-					Earth Observation (EO) is a rapidly growing research field that brings together computer vision, machine learning, and signal/image processing to provide valuable information about processes occurring at the Earth's surface. EO utilizes data from airborne and spaceborne sensors to capture detailed information on materials and biophysical properties across a wide range of the electromagnetic spectrum, with varying spatial, temporal, and spectral resolutions.
-				</p>
-				<p>
-					This assumes particular importance in view of the environmental challenges our Planet is facing, including climate change, habitat destruction, pollution and loss of biodiversity. By combining advanced image processing techniques, machine learning algorithms, and big data analysis, computer vision can be used to automate the process of monitoring and analysing environmental data.
-				</p>
-				<p>
-					EO has a wide range of applications, including online mapping services, large-scale surveillance, urban modelling, navigation systems, natural hazard forecast and response, climate change monitoring, virtual habitat modelling, and more. The integration with other kinds of data necessitates the application of multiple pattern recognition tasks for analysis and offers immense potential for advancing our understanding of Earth's dynamics, thanks to an interdisciplinarity which allows to address complex societal and environmental challenges.
-				</p>
-				<p>
-					The primary goal of this workshop is to foster collaboration and idea exchange among the Computer Vision, Remote Sensing, Environmental Monitoring, and Climate Change communities, both nationally and internationally. We aim to bring together researchers and experts from the three fields to promote interdisciplinary research, encourage innovative computer vision approaches for automated interpretation of Earth observation and other correlated data, and enhance knowledge within the vision community for this rapidly evolving and highly impactful area of research. The implications of this research are far-reaching, affecting human society, economy, industry, and the environment.
-				</p>
-				<p>
-					Precisely, a non-exhaustive list of topics of interest includes the following:   
-				</p>
-				<ul class="general">
-					<li class="general">
-						Methods: advancements in Data-centric machine learning; foundation models; remote Sensing, UAV or Vision data with language processing models (Multimodal Large Language Models, Vision Language Models, Prompt Engineering, RAG, etc); geospatial AI; open-set, open-world, and open long-tailed recognition; Multi-resolution, multi-temporal, multi-sensor, multi-view, multi-modal approaches; Generative models (GANs, stable diffusion, autoencoders); Graph Neural Networks; Spatio-temporal modeling; Self-, weakly-, semi-, and unsupervised approaches; Physics-Informed Neural Networks; human-in-the-loop and active learning; edge AI, explainable and trustworthy AI; uncertainty-aware learning; digital twins; climate informatics; green AI; causal learning, and so on.
-					</li>
-					<li class="general">
-						Tasks: innovative approaches to classification; object detection; segmentation (universal, semantic, panoptic, and/or instance); environmental anomaly detection; climate risk prediction; flood and wildfire detection; drought monitoring; glacier retreat analysis; biodiversity assessment; ecosystem monitoring; carbon emission estimation; crop health analysis; precision agriculture; water quality assessment; air pollution monitoring; urban heat island detection; data augmentation and synthetic data generation; deep fake and misinformation; domain adaptation and concept drift; super-resolution; explainability and interpretability; Multi and hyperspectral, optical, and radar image processing; environmental scene understanding; habitat mapping; geospatial reasoning; and so on.
+			<div class="container mveo-main">
 
-					</li>
-					<li class="general">
-						Applications: impactful solutions for disaster response and resilience; climate change mitigation and adaptation; sustainable urban planning and smart cities; sustainable intelligent precision agriculture; forest deforestation monitoring; Coast, sea, and marine monitoring; water conservation; renewal energy assessment; biodiversity conservation; carbon accounting; circular economy;  sustainable development goals tracking; geoscience; ecological restoration; air quality monitoring; cryosphere monitoring; food security; climate justice; geoscience, phenological studies; environmental impact assessment; ecosystem services; sustainable transportation; natural resource management; ocean health monitoring; climate policy support; digital earth systems; sustainability analytics; and so on.
-					</li>
-				</ul>
+				<section class="workshop-heading" aria-label="Workshop title">
+					<span class="eyebrow">BMVC 2026 Workshop</span>
+					<h2>Machine Vision for Earth Observation, Environmental Monitoring, and Climate Change</h2>
+				</section>
+
+				<section class="aims-card" aria-labelledby="aims-scope-title">
+					<h4 id="aims-scope-title">Aims and Scope</h4>
+					<p>Earth Observation (EO) is a rapidly growing research field that brings together computer vision, machine learning, and signal/image processing to provide valuable information about processes occurring at the Earth's surface. EO utilizes data from airborne and spaceborne sensors to capture detailed information on materials and biophysical properties across a wide range of the electromagnetic spectrum, with varying spatial, temporal, and spectral resolutions.</p>
+
+					<p>This assumes particular importance in view of the environmental challenges our Planet is facing, including climate change, habitat destruction, pollution and loss of biodiversity. By combining advanced image processing techniques, machine learning algorithms, and big data analysis, computer vision can be used to automate the process of monitoring and analysing environmental data.</p>
+
+					<p>EO has a wide range of applications, including online mapping services, large-scale surveillance, urban modelling, navigation systems, natural hazard forecast and response, climate change monitoring, virtual habitat modelling, and more. The integration with other kinds of data necessitates the application of multiple pattern recognition tasks for analysis and offers immense potential for advancing our understanding of Earth's dynamics, thanks to an interdisciplinarity which allows to address complex societal and environmental challenges.</p>
+
+					<p>The primary goal of this workshop is to foster collaboration and idea exchange among the Computer Vision, Remote Sensing, Environmental Monitoring, and Climate Change communities, both nationally and internationally. We aim to bring together researchers and experts from the three fields to promote interdisciplinary research, encourage innovative computer vision approaches for automated interpretation of Earth observation and other correlated data, and enhance knowledge within the vision community for this rapidly evolving and highly impactful area of research. The implications of this research are far-reaching, affecting human society, economy, industry, and the environment.</p>
+
+					<div class="scope-highlight">The workshop welcomes research spanning new machine-vision methods, environmental and geospatial analysis tasks, and impactful applications addressing climate, sustainability and Earth observation challenges.</div>
+				</section>
+
+				<section aria-labelledby="topics-title">
+					<div class="topics-heading">
+						<h4 id="topics-title">Topics of Interest</h4>
+						<p>A non-exhaustive selection of research themes welcomed by MVEO 2026.</p>
+					</div>
+
+					<div class="scope-grid">
+						<article class="scope-card">
+							<div class="scope-card-head">
+								<span class="icon"><i class="fas fa-brain" aria-hidden="true"></i></span>
+								<h5>Methods</h5>
+							</div>
+							<p>Advancements in Data-centric machine learning; foundation models; remote Sensing, UAV or Vision data with language processing models (Multimodal Large Language Models, Vision Language Models, Prompt Engineering, RAG, etc); geospatial AI; open-set, open-world, and open long-tailed recognition; Multi-resolution, multi-temporal, multi-sensor, multi-view, multi-modal approaches; Generative models (GANs, stable diffusion, autoencoders); Graph Neural Networks; Spatio-temporal modeling; Self-, weakly-, semi-, and unsupervised approaches; Physics-Informed Neural Networks; human-in-the-loop and active learning; edge AI, explainable and trustworthy AI; uncertainty-aware learning; digital twins; climate informatics; green AI; causal learning, and so on.</p>
+						</article>
+
+						<article class="scope-card">
+							<div class="scope-card-head">
+								<span class="icon"><i class="fas fa-crosshairs" aria-hidden="true"></i></span>
+								<h5>Tasks</h5>
+							</div>
+							<p>Innovative approaches to classification; object detection; segmentation (universal, semantic, panoptic, and/or instance); environmental anomaly detection; climate risk prediction; flood and wildfire detection; drought monitoring; glacier retreat analysis; biodiversity assessment; ecosystem monitoring; carbon emission estimation; crop health analysis; precision agriculture; water quality assessment; air pollution monitoring; urban heat island detection; data augmentation and synthetic data generation; deep fake and misinformation; domain adaptation and concept drift; super-resolution; explainability and interpretability; Multi and hyperspectral, optical, and radar image processing; environmental scene understanding; habitat mapping; geospatial reasoning; and so on.</p>
+						</article>
+
+						<article class="scope-card">
+							<div class="scope-card-head">
+								<span class="icon"><i class="fas fa-leaf" aria-hidden="true"></i></span>
+								<h5>Applications</h5>
+							</div>
+							<p>Impactful solutions for disaster response and resilience; climate change mitigation and adaptation; sustainable urban planning and smart cities; sustainable intelligent precision agriculture; forest deforestation monitoring; Coast, sea, and marine monitoring; water conservation; renewal energy assessment; biodiversity conservation; carbon accounting; circular economy; sustainable development goals tracking; geoscience; ecological restoration; air quality monitoring; cryosphere monitoring; food security; climate justice; phenological studies; environmental impact assessment; ecosystem services; sustainable transportation; natural resource management; ocean health monitoring; climate policy support; digital earth systems; sustainability analytics; and so on.</p>
+						</article>
+					</div>
+				</section>
+
+				<div class="submit-area">
+					<a class="submit-now-btn" href="https://mveo.github.io/submission.html">
+						SUBMIT NOW <i class="fas fa-arrow-right" aria-hidden="true"></i>
+					</a>
+					<small>Paper submission deadline: 21 September 2026</small>
+				</div>
+
 			</div>
 		</div>
 	</div>
