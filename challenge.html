@@ -90,9 +90,89 @@
 		<div class="cell2">
 			<div class="container">
 				<h4>Data-Centric Land Cover Classification Challenge</h4>
-					<p>
-						TBA
-					</p>
+                    <p>
+                        In remote sensing image classification, training state-of-the-art deep learning models typically requires large Earth observation datasets containing thousands of high-resolution satellite and aerial images. However, storing, transferring, and training models on these large-scale geospatial datasets incurs immense computational costs, energy consumption, and storage overhead. Dataset distillation offers a promising solution by synthesizing a small, highly informative set of images that captures the essential spatial patterns of the full dataset. When a model is trained on this compact synthetic set, it achieves competitive performance in a fraction of the time and compute.
+                    </p>
+                    <p>
+                        This Challenge invites you to develop novel dataset distillation algorithms tailored for remote sensing imagery. Your challenge is to condense large-scale satellite data into a minimal set of synthetic, semantically rich visual representations. By advancing dataset distillation for Earth observation, your solutions will help enable resource-efficient planetary-scale mapping, on-board satellite edge computing, and rapid model retraining.
+                    </p>
+
+                <h5>Challenge Summary</h5>      
+                    <p>
+                        In this competition, you will develop machine learning methods to perform dataset distillation (also known as dataset synthesis) for remote sensing image classification. The primary objective is to condense a large training dataset into a tiny, highly concentrated set of synthetic images while retaining model performance when training from scratch on the reduced set. To this end, you are provided with a training dataset composed of 18,900 64x64 images spanning 10 classes, alongside their corresponding ground truth labels.
+                    </p>
+                    <p>
+                        Success is evaluated by comparing your submitted test predictions with the undisclosed ground truth and calculating a composite score that balances overall accuracy against a log-normalized efficiency score based on the number of synthetic images used during training. <b>To ensure fair comparison, all submissions must evaluate their distilled datasets using the same model architecture - specifically, a <a href="https://docs.pytorch.org/vision/main/models/generated/torchvision.models.vit_b_16.html" target="_blank">Vision Transformer (ViT)</a>. Starter baseline code is provided <a href="https://github.com/mveo/challenge_2026_public" target="_blank">here</a> - note that hyperparameters (such as learning rate, etc.) must not be altered in the evaluation code.</b>
+                    </p>
+                    <p>
+                        <b>Top-performing teams will be required to submit their distilled training images for verification after the competition concludes.</b>
+                    </p>
+                    <p>
+                        Please, check for more info on <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge-26/overview" target="_blank">Kaggle</a>.
+                    </p>
+                    
+                <h5>Dataset</h5>
+                    <p>
+                        The challenge will use this <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge-26/data" target="_blank">dataset</a>, which is composed of 18,900 RGB satellite/aerial training images evenly split across 10 anonymized land-cover classes. Validation and test sets are also available (with 4,050 samples each). Participants are tasked with synthesizing a minimal, highly informative subset of training images while maintaining model classification performance on the test set.
+                    </p>
+                    <p>
+                        More info on <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge-2026/data" target="_blank">Kaggle</a>.
+                    </p>
+
+
+                <h5>Submission</h5>         
+                    <p>
+                    Your submission must be a single <strong><code>.csv</code> file</strong> containing predictions for all test images <strong>PLUS exactly one sentinel row</strong> declaring how many synthetic images were used to train your final model. These are the submission file requirements:
+                    </p>
+                    <ol>
+                        <li><strong>Header:</strong> Must contain <code>filename</code> and <code>label</code> columns.</li>
+                        <li><strong>Sentinel Row:</strong> Must include the exact row <code>filename = "__num_train_images__"</code> where <code>label</code> is an integer indicating number of training samples.</li>
+                        <li><strong>Prediction Rows:</strong> One row for every test image ID with its predicted class label.</li>
+                    </ol>
+                    <p>
+                        More information can be found <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge-26/overview" target="_blank">here</a>. After creating this file, please submit it on <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge-26/submissions" target="_blank">Kaggle</a>.
+                    </p>
+                
+                <h5>Timeline</h5>
+                    <p>
+                        Participants may submit multiple solutions. All submitted solutions will be listed on the leaderboard.
+                    </p>
+
+                    <div>
+                        <table class="table table-striped">
+                         <thead>
+                            <tr>
+                               <th scope="col">Subject</th>
+                               <th scope="col">Date</th>
+                            </tr>
+                         </thead>
+                         <tbody>
+                            <tr>
+                               <td>Submission Deadline</td>
+                               <td>Sunday, 15 November 2026, 23:59 (UK time)</td>
+                            </tr>
+                            <tr>
+                               <td>Workshop</td>
+                               <td>Thursday, 26 November 2026</td>
+                            </tr>
+                         </tbody>
+                        </table>
+                    </div>
+                
+                <h5>Results, Presentation, Awards, and Prizes</h5>
+                    <p>
+                        The final results of this challenge will be presented during the Workshop.
+                        The authors of the top-ranked methods will be invited to present their approaches at the Workshop in Lancaster/UK, on 26 November 2026.
+                        These authors will also be invited to co-author a journal paper which will summarize the outcome of this challenge and will be submitted with open access to IEEE JSTARS.
+                    </p>
+                
+                <h5>Organizers</h5>
+                    <p>
+                        Keiller Nogueira, University of Liverpool, UK<br>
+                        Ronny Hänsch, German Aerospace Center (DLR), Germany<br>
+                        Wanli Ma, University of Cambridge, UK<br>
+                        Vahid Akbari, University of Stirling, UK
+                    </p>
 			</div>
 		</div>
 	</div>
