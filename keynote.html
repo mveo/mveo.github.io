@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Workshop on Machine Vision for Earth Observation and Environment Monitoring">
+
+    <title>Workshop on Machine Vision for Earth Observation, Environmental Monitoring, and Climate Change</title>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Bootstrap + Creative Design main styles -->
+    <link rel="stylesheet" href="assets/css/creative-design.css">
+
+    <!-- Custom styles for the organizer section -->
+    <style>
+        .organizer {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .organizer img {
+            width: 150px;
+            height: auto;
+            max-width: 100%;
+        }
+
+	.organizer-description {
+            flex: 1;
+	    padding-left: 10px;
+        }
+    
+
+        /* Shared MVEO 2026 header configuration: keep the complete 2048×320 banner visible at every browser width. */
+        header#home.header {
+            width: 100%;
+            height: auto !important;
+            min-height: 0 !important;
+            aspect-ratio: 2048 / 320;
+            background-size: 100% 100% !important;
+            background-position: top center !important;
+            background-repeat: no-repeat !important;
+            background-color: #ffffff;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .maintable {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        header#home.header + .maintable {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+
+        header#home.header .header-content,
+        header#home.header .overlay {
+            display: none !important;
+        }
+
+        /* Keynote speaker layout */
+        .keynote-speaker {
+            margin-bottom: 45px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e7e7e7;
+        }
+
+        .keynote-speaker:last-child {
+            border-bottom: none;
+        }
+
+        .keynote-speaker img {
+            width: 180px;
+            height: 220px;
+            object-fit: cover;
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .keynote-title {
+            margin-top: 8px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .keynote-affiliation {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+</style>
+</head>
+<body>
+
+<!-- Page Header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content">
+            <h2>Workshop on Machine Vision for Earth Observation, Environmental Monitoring, and Climate Change<h2>
+	    <div style="padding-top: 10px;">
+		<h5>in conjunction with the British Machine Vision Conference (BMVC) 2026</h5> 
+	    </div>
+        </div>
+    </header>
+	<!-- End of Page Header -->
+
+    <div class="maintable">
+	<div class="trow">
+		<div class="cell1">
+				<nav class="collapse show navbar navbar-vertical navbar-light align-items-start border-0">
+					<div class="navbar-nav w-100 overflow-hidden">
+						<a href="index.html" class="nav-item nav-link">Aims and Scope</a>
+						<a href="#" class="nav-item nav-link active">Keynote Speakers</a>
+						<a href="dates.html" class="nav-item nav-link">Important Dates</a>
+						<a href="challenge.html" class="nav-item nav-link">Challenge</a>
+						<a href="submission.html" class="nav-item nav-link">Submission</a>
+						<a href="program.html" class="nav-item nav-link">Program</a>
+						<a href="https://bmvc2026.bmva.org/" target="_blank" class="nav-item nav-link">BMVC 2026</a>
+						<a href="location.html" class="nav-item nav-link">Location</a>
+						<a href="people.html" class="nav-item nav-link">People</a>
+						<a href="sponsors.html" class="nav-item nav-link">Sponsors</a>
+						<a href="pasteditions.html" class="nav-item nav-link">Past Editions</a>
+					</div>
+				</nav>
+		</div>
+
+        <div class="cell2">
+            <div class="container">
+                <h4>Keynote Speakers</h4>
+                <p>We are delighted to welcome four keynote speakers to MVEO 2026. Speaker details and talk descriptions are listed below:</p>
+
+                <div class="keynote-speaker">
+                    <h5><strong>Professor Peter Atkinson</strong></h5>
+                    <div class="row">
+                        <div class="col-md-auto">
+                            <img src="assets/imgs/people_photos/keynote-speaker-1.jpg" alt="Professor Alex Morgan">
+                        </div>
+                        <div class="col-md-9">
+                            <p class="keynote-affiliation">Distinguished Professor of Spatial Data Science at Lancaster University</p>
+                            <p class="keynote-title">Talk: Spatial Latent Gaussian Modelling with Change of Support</p>
+                            <p>Spatial environmental data on some property of interest are often derived from multiple sources (e.g. EO satellites, in situ sensors, survey samples) with different spatial supports (the space on which a measurement or observation is defined). It is also common for predictors to be measured on different spatial supports than the response variable in a regression-type setting. The spatial support is ubiquitous for environmental science data, while notably absent in some other fields such as those that depend on natural language. Thus, for environmental science, image and data fusion are crucial tasks, including as part of multi-modal fusion. A common approach for handling different supports, used by practitioners, is to project all variables onto a common support (e.g., via downscaling or interpolation) and then use standard spatial models on this common support. However, this approach can introduce biases and the statistical coherence between different supports is not guaranteed. I will introduce a Bayesian spatial latent Gaussian model (SLGM) that can handle data with different rectilinear supports in the response variable and the predictors. The SLGM can handle changes of support naturally according to the properties of the spatial stochastic process being used, and can account for change of support uncertainty in parameter estimation and prediction. In the SLGM, spatial stochastic processes are defined as linear combinations of basis functions where Gaussian Markov random fields (GMRFs) define the weights. This process can then be projected to different (any) spatial supports whilst maintaining the same underlying parameters. The generalisation potential of the approach is demonstrated through simulation and a real use case, modelling the land suitability of improved grassland in South Wales, UK.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="keynote-speaker">
+                    <h5><strong>Dr. Nico Lang</strong></h5>
+                    <div class="row">
+                        <div class="col-md-auto">
+                            <img src="assets/imgs/people_photos/keynote-speaker-2.jpg" alt="Dr. Sophia Chen">
+                        </div>
+                        <div class="col-md-9">
+                            <p class="keynote-affiliation">Asst. Prof. at the University of Copenhagen</p>
+                            <p class="keynote-title">Talk: AI for Climate Risk and Environmental Monitoring</p>
+                            <p>This talk will present recent advances in applying machine learning to climate-risk assessment and environmental monitoring. It will cover the integration of satellite imagery, sensor networks, and geospatial data for detecting environmental change, forecasting risk, and supporting evidence-based decision making for climate adaptation and resilience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="keynote-speaker">
+                    <h5><strong>Dr. Olof Mogren</strong></h5>
+                    <div class="row">
+                        <div class="col-md-auto">
+                            <img src="assets/imgs/people_photos/keynote-speaker-3.jpg" alt="Professor Daniel Rossi">
+                        </div>
+                        <div class="col-md-9">
+                            <p class="keynote-affiliation">Principal Researcher at RISE Research institutes of Sweden</p>
+                            <p class="keynote-title">Talk: From Pixels to Decisions: Trustworthy Machine Vision for the Environment</p>
+                            <p>The presentation will examine the pathway from remote-sensing imagery to reliable environmental decisions. Topics will include uncertainty estimation, explainability, domain shift, data quality, and evaluation of machine-vision systems used for biodiversity, land-use change, disaster response, and sustainable infrastructure monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="keynote-speaker">
+                    <h5><strong>Dr. Maram Hasan</strong></h5>
+                    <div class="row">
+                        <div class="col-md-auto">
+                            <img src="assets/imgs/people_photos/keynote-speaker-4.jpg" alt="Dr. Maya Patel">
+                        </div>
+                        <div class="col-md-9">
+                            <p class="keynote-affiliation">Postdoctoral Researcher at IIT Bombay</p>
+                            <p class="keynote-title">Talk: Multimodal Learning for a Changing Planet</p>
+                            <p>This keynote will focus on multimodal approaches that combine optical, radar, LiDAR, text, and other geospatial data sources. It will highlight how multimodal learning can improve robustness and coverage in Earth-observation applications, and discuss emerging research directions in self-supervised learning, data fusion, and scalable environmental intelligence.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- core  -->
+<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+<!-- bootstrap affix -->
+<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+<!-- Creative Design js -->
+<script src="assets/js/creative-design.js"></script>
+
+</body>
+</html>
