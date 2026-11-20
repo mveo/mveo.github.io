@@ -50,6 +50,47 @@
         header#home.header .overlay {
             display: none !important;
         }
+
+        /* MVEO 2026 interactive programme – scoped to this section only */
+        .mveo-program { --mveo-ink:#18354a; --mveo-blue:#146a91; --mveo-green:#279a73; --mveo-border:#dbe7ed; color:var(--mveo-ink); max-width:980px; margin:0 auto 3rem; font-family:inherit; }
+        .mveo-program * { box-sizing:border-box; }
+        .mveo-program .program-title { font-weight:750; color:#16364d; margin:0 0 .35rem; letter-spacing:-.025em; }
+        .mveo-program .program-subtitle { font-size:.94rem; color:#647887; margin:0 0 1.35rem; }
+        .mveo-program .program-list { position:relative; display:grid; gap:12px; }
+        .mveo-program .program-row { background:#fff; border:1px solid var(--mveo-border); border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(14,55,75,.045); }
+        .mveo-program .program-row.program-simple { display:flex; align-items:center; min-height:72px; border-left:4px solid #b9cbd3; padding:14px 19px; gap:22px; }
+        .mveo-program .program-row.program-break { border-left-color:var(--mveo-green); background:#f4faf7; }
+        .mveo-program .program-time { color:#177391; font-size:.98rem; font-weight:750; white-space:nowrap; min-width:112px; font-variant-numeric:tabular-nums; }
+        .mveo-program .program-name { font-weight:700; color:var(--mveo-ink); }
+        .mveo-program .program-note { font-size:.85rem; color:#71818b; margin-top:3px; }
+        .mveo-program details.program-session { border-left:4px solid #1586a4; }
+        .mveo-program details.program-session:nth-of-type(even) { border-left-color:#38a48b; }
+        .mveo-program details.program-session summary { display:flex; flex-wrap:wrap; align-items:center; gap:14px 22px; padding:19px; cursor:pointer; list-style:none; user-select:none; }
+        .mveo-program details.program-session summary::-webkit-details-marker { display:none; }
+        .mveo-program details.program-session summary:focus-visible { outline:3px solid #56a9c9; outline-offset:-4px; }
+        .mveo-program details.program-session summary:hover { background:#f5fafc; }
+        .mveo-program .program-main { flex:1 1 230px; min-width:0; }
+        .mveo-program .program-meta { display:flex; flex-wrap:wrap; gap:6px 14px; align-items:center; margin-top:5px; color:#647887; font-size:.87rem; }
+        .mveo-program .program-chair { background:#eff5f8; color:#426678; border-radius:20px; padding:3px 10px; font-size:.82rem; font-weight:600; }
+        .mveo-program .program-toggle { display:inline-flex; align-items:center; gap:8px; color:#126e92; font-size:.83rem; font-weight:700; white-space:nowrap; }
+        .mveo-program .program-chevron { width:10px; height:10px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(45deg); transition:transform .2s; margin:-4px 4px 0; }
+        .mveo-program details[open] .program-chevron { transform:rotate(225deg); margin:4px 4px 0; }
+        .mveo-program .program-detail { padding:4px 22px 22px 25px; border-top:1px solid #e6eef2; background:linear-gradient(180deg,#fafdfe,#fff 65px); }
+        .mveo-program .program-activity { padding:16px 0; border-bottom:1px solid #e9eff2; }
+        .mveo-program .program-activity:last-child { border-bottom:0; padding-bottom:0; }
+        .mveo-program .activity-head { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:5px 14px; margin-bottom:6px; }
+        .mveo-program .activity-label { margin:0; color:#174e69; font-size:1rem; font-weight:750; }
+        .mveo-program .activity-duration { font-size:.81rem; color:#627a88; }
+        .mveo-program .activity-description { margin:0; color:#526c7b; font-size:.9rem; line-height:1.55; }
+        .mveo-program .paper-list { display:grid; gap:9px; margin-top:12px; }
+        .mveo-program .paper { padding:13px 15px; background:#f5f9fb; border:1px solid #e3edf2; border-radius:9px; }
+        .mveo-program .paper-title { margin:0 0 4px; font-weight:700; font-size:.94rem; line-height:1.4; color:#23495f; }
+        .mveo-program .paper-id { color:#1683a3; font-weight:800; margin-right:5px; }
+        .mveo-program .paper-authors { margin:0; font-size:.83rem; line-height:1.5; color:#677984; }
+        .mveo-program a { color:#147a9b; text-decoration:underline; text-underline-offset:2px; }
+        .mveo-program a:hover { color:#095570; }
+        .mveo-program .schedule-footnote { font-size:.82rem; color:#738690; margin:15px 3px 0; line-height:1.5; }
+        @media (max-width:600px) { .mveo-program .program-row.program-simple { gap:11px; align-items:flex-start; flex-direction:column; } .mveo-program details.program-session summary { gap:8px 14px; padding:15px; } .mveo-program .program-time { min-width:0; } .mveo-program .program-main { flex-basis:100%; } .mveo-program .program-toggle { margin-left:auto; } .mveo-program .program-detail { padding:3px 14px 17px 18px; } }
     </style>
 </head>
 <body>
@@ -90,79 +131,7 @@
 		
 		<div class="cell2">
 			<div class="container">
-				<h4>Tentative Program</h4>
-				<div>
-					<table class="table table-striped">
-					 <tbody>
-						<tr>
-						   <td><b>9:00-9:05</b></td>
-						   <td>Welcome</td>
-						</tr>
-						<tr>
-						   <td><b>9:05-9:55</b></td>
-						   <td><a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge-26" target="_blank">Challenge Results</a></td>
-						</tr>
-						<tr>
-						   <td><b>10:00-10:45</b></td>
-						   <td>
-								<p><a href="https://mveo.github.io/keynote.html" target="_blank">Invited Keynote Speaker: Dr Devis Tuia</a></p>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>10:45-11:25</b></td>
-						   <td>
-								<p><a href="https://mveo.github.io/keynote.html" target="_blank">Invited Keynote Speaker: Professor Peter Atkinson</a></p>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>11:25-12:30</b></td>
-						   <td>
-								<p>Oral Paper Presentations - Session 1</p>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>12:35-13:30</b></td>
-						   <td>
-								<p>Lunch</p>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>13:30-14:10</b></td>
-						   <td>
-								<p><a href="https://mveo.github.io/keynote.html" target="_blank">Invited Keynote Speaker: Dr Maram Hasan</a></p>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>14:10-14:50</b></td>
-						   <td>
-								<p>Oral Paper Presentations - Session 2</p>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>14:50-15:35</b></td>
-						   <td>
-								<p><a href="https://mveo.github.io/keynote.html" target="_blank">Invited Keynote Speaker: Dr Olof Morgen</a></p>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>15:35-16:20</b></td>
-						   <td>
-								<p><a href="https://mveo.github.io/keynote.html" target="_blank">Invited Keynote Speaker: Dr Nico Lang</a></p>
-							</td>
-						</tr>
-						<tr>
-						   <td><b>16:20-17:55</b></td>
-						   <td>
-								<p>Oral Paper Presentations - Session 3</p>
-							</td>
-						</tr>					
-						<tr>
-						   <td><b>16:55-17:00</b></td>
-						   <td>Closing</td>
-						</tr>
-					 </tbody>
-					</table>
-				</div>
+<section class="mveo-program" aria-labelledby="mveo-program-heading"><h3 id="mveo-program-heading" class="program-title">Workshop Programme</h3><p class="program-subtitle">26 November 2026 · 09:00–17:00 · Select a session to explore its presentations and activities.</p><div class="program-list"><div class="program-row program-simple"><span class="program-time">09:00–09:05</span><div><div class="program-name">Welcome and workshop introduction</div><div class="program-note">5 minutes</div></div></div><details class="program-row program-session"><summary><span class="program-time">09:05–10:30</span><div class="program-main"><div class="program-name">Session 1</div><div class="program-meta"><span>Challenge results &amp; keynote</span><span class="program-chair">Chair: Keiller</span></div></div><span class="program-toggle"><span class="program-toggle-label">View details</span><span class="program-chevron" aria-hidden="true"></span></span></summary><div class="program-detail"><section class="program-activity"><div class="activity-head"><h5 class="activity-label">Challenge results introduction</h5><span class="activity-duration">5–10 min</span></div><p class="activity-description">Overview of the <a href="https://www.kaggle.com/competitions/data-centric-land-cover-classification-challenge-26" target="_blank" rel="noopener noreferrer">Data-Centric Land Cover Classification Challenge</a> results.</p></section><section class="program-activity"><div class="activity-head"><h5 class="activity-label">Challenge participant presentations</h5><span class="activity-duration">3 presentations · 15 min each</span></div><p class="activity-description">Each presentation includes 10 minutes for the presentation and 5 minutes for questions.</p></section><section class="program-activity"><div class="activity-head"><h5 class="activity-label">Invited keynote: <a href="keynote.html">Dr Devis Tuia</a></h5><span class="activity-duration">40 min presentation + 10 min Q&amp;amp;A</span></div><p class="activity-description">Online presentation</p></section></div></details><details class="program-row program-session"><summary><span class="program-time">10:30–12:30</span><div class="program-main"><div class="program-name">Session 2</div><div class="program-meta"><span>Keynote &amp; oral papers (5)</span><span class="program-chair">Chair: Lakshmi</span></div></div><span class="program-toggle"><span class="program-toggle-label">View details</span><span class="program-chevron" aria-hidden="true"></span></span></summary><div class="program-detail"><section class="program-activity"><div class="activity-head"><h5 class="activity-label">Invited keynote: <a href="keynote.html">Professor Peter Atkinson</a></h5><span class="activity-duration">40 min presentation + 10 min Q&amp;amp;A</span></div></section><section class="program-activity"><div class="activity-head"><h5 class="activity-label">Oral paper presentations — Session 1</h5><span class="activity-duration">5 papers · 15 min each</span></div><p class="activity-description">10 min presentation + 5 min Q&amp;A for each paper.</p><div class="paper-list"><div class="paper"><p class="paper-title"><span class="paper-id">#3</span>From Continental Benchmarks to Local Short-Range NDVI Forecasting</p><p class="paper-authors">Cynthia Ugwu and Roger Marí (Eurecat)</p></div><div class="paper"><p class="paper-title"><span class="paper-id">#4</span>From Waste Items to Cleanup Units: Harmonizing Instance Granularity with Geometry and Visual Context</p><p class="paper-authors">Yanis Bardes, Hassan Soubra (Ecole Centrale d&#x27;Electronique, ECE Paris), Zineb Noumir (Alten labs) and Amar Ramdane-Cherif (University Paris-Saclay)</p></div><div class="paper"><p class="paper-title"><span class="paper-id">#5</span>PIUA-Transformer: A Physics-Informed Uncertainty-Aware Transformer with Explainable AI for Mediterranean Wildfire Risk Forecasting</p><p class="paper-authors">Sarah Bourenane and Lakshmi Babu Saheer (Anglia Ruskin University)</p></div><div class="paper"><p class="paper-title"><span class="paper-id">#6</span>Beyond FLOPs: Component-Level Energy Benchmarking for Sustainable Oil-Spill Monitoring</p><p class="paper-authors">Kuanyin Malang, Pascal Ezenkwu and Carlos Moreno-Garcia (Robert Gordon)</p></div><div class="paper"><p class="paper-title"><span class="paper-id">#7</span>Shapley Values for Modality Attribution in Robust Multimodal Remote Sensing Models</p><p class="paper-authors">Max Casado (Inria, UMR TETIS), Thalita drumond (EPF Engineering School, Montpellier), Guilherme Dean Pelegrina (Mackenzie Presbyterian University), Cássio Fraga Dantas (Inria, UMR TETIS)</p></div></div></section></div></details><div class="program-row program-simple program-break"><span class="program-time">12:30–13:30</span><div><div class="program-name">Lunch &amp; networking</div><div class="program-note">1 hour</div></div></div><details class="program-row program-session"><summary><span class="program-time">13:30–15:30</span><div class="program-main"><div class="program-name">Session 3</div><div class="program-meta"><span>Two keynotes &amp; oral papers (2)</span><span class="program-chair">Chair: Mahdi</span></div></div><span class="program-toggle"><span class="program-toggle-label">View details</span><span class="program-chevron" aria-hidden="true"></span></span></summary><div class="program-detail"><section class="program-activity"><div class="activity-head"><h5 class="activity-label">Invited keynote: <a href="keynote.html">Dr Maram Hasan</a></h5><span class="activity-duration">35 min presentation + 10 min Q&amp;amp;A</span></div></section><section class="program-activity"><div class="activity-head"><h5 class="activity-label">Oral paper presentations — Session 2</h5><span class="activity-duration">2 papers · 15 min each</span></div><p class="activity-description">10 min presentation + 5 min Q&amp;A for each paper.</p><div class="paper-list"><div class="paper"><p class="paper-title"><span class="paper-id">#9</span>EmberGym: A Geographically Grounded Benchmark for Wildfire Suppression with Reinforcement Learning</p><p class="paper-authors">Hitheshvar Sampath, Lakshmi Babu Saheer, Akshay Kumar and Mahdi Maktabdar (Anglia Ruskin University)</p></div><div class="paper"><p class="paper-title"><span class="paper-id">#10</span>Generating Heatmaps of Air quality Prediction</p><p class="paper-authors">Chinedu Ejezie and Hitheshvar Sampath, Lakshmi Babu Saheer and Mahdi Maktabdar (Anglia Ruskin University)</p></div></div></section><section class="program-activity"><div class="activity-head"><h5 class="activity-label">Invited keynote: <a href="keynote.html">Dr Olof Morgen</a></h5><span class="activity-duration">35 min presentation + 10 min Q&amp;amp;A</span></div><p class="activity-description">Online presentation</p></section></div></details><details class="program-row program-session"><summary><span class="program-time">15:30–17:00</span><div class="program-main"><div class="program-name">Session 4</div><div class="program-meta"><span>Keynote, oral papers (3) &amp; conclusion</span><span class="program-chair">Chair: Lakshmi</span></div></div><span class="program-toggle"><span class="program-toggle-label">View details</span><span class="program-chevron" aria-hidden="true"></span></span></summary><div class="program-detail"><section class="program-activity"><div class="activity-head"><h5 class="activity-label">Invited keynote: <a href="keynote.html">Dr Nico Lang</a></h5><span class="activity-duration">40 min presentation + 10 min Q&amp;amp;A</span></div></section><section class="program-activity"><div class="activity-head"><h5 class="activity-label">Oral paper presentations — Session 3</h5><span class="activity-duration">3 papers · 15 min each</span></div><p class="activity-description">10 min presentation + 5 min Q&amp;A for each paper.</p><div class="paper-list"><div class="paper"><p class="paper-title"><span class="paper-id">#11</span>Towards Multimodal UAV-Based Cattle Weight Estimation in Open-Pasture Herd Scenes</p><p class="paper-authors">Mingqi Gao (University of Sheffield)*, Xiao Ma (Nottingham Trent University) and Jefersson dos Santos (University of Sheffield)</p></div><div class="paper"><p class="paper-title"><span class="paper-id">#13</span>Investigating Cause-Specific Fire Drivers Using Multi-Source Earth Observation Data and Explainable Machine Learning</p><p class="paper-authors">Benyamin Hosseiny (University of Exeter)*, Henrik Persson (SLU), Tommaso Jucker (University of Bristol), Hywel Williams and Milto Miltiadou (University of Exeter)</p></div><div class="paper"><p class="paper-title"><span class="paper-id">#14</span>Small-Scale Deforestation Mapping in SAR Imagery via Autoencoder Anomaly Detection</p><p class="paper-authors">Sara Mobsite, Yifan ZHANG, Laure Berti-Équille, Thibault Catry (IRD), Frédéric Frappart (INRAE), Joris Guérin, Renaud Hostache, Emmanuel ROUX and Bertrand Ygorra (IRD)</p></div></div></section><section class="program-activity"><div class="activity-head"><h5 class="activity-label">Workshop conclusion</h5></div></section></div></details></div><p class="schedule-footnote">Times indicate overall session blocks; individual presentation start times are not specified in the programme document. Click a session header to expand or collapse its details.</p></section>
 			</div>
 		</div>
 	</div>
